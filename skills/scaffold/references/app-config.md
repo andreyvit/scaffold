@@ -1,6 +1,6 @@
 # Store configuration in JSON
 
-All configuration is inside config.json, in top-level package or similar, per environment or env group (app-environments.md):
+All configuration is inside config.json, in top-level package or similar, per environment or [environment group](app-environments.md):
 
 ```json
 {
@@ -39,9 +39,9 @@ All configuration is inside config.json, in top-level package or similar, per en
 
 (Use names appropriate for web stack; these are examples for Go.)
 
-Read sections for each group and environment itself into same object, so that later values overwrite earlier ones. If ConfigOverridesPath non-empty, read it last, so that it overrides anything else. `config-local.json. If ConfigOverridesPathRequired, then crash if ConfigOverridesPath empty or not found to prevent mistakes.
+Read sections for each group and environment itself into same object, so that later values overwrite earlier ones. If ConfigOverridesPath is non-empty, read it last, so that it overrides earlier values. If ConfigOverridesPathRequired, then crash if ConfigOverridesPath empty or not found to prevent mistakes.
 
-No env vars or cmdline options for config, use JSON only.
+Use JSON for configuration values, not environment variables or command-line overrides. The environment-selection flag and secret-encryption command below remain available.
 
 Secrets in JSON encrypted using NaCl-compatible secretbox encryption (XSalsa20 + Poly1305) via golang.org/x/crypto/nacl/secretbox. Each value is "<keyname>:<base64>", where <keyname> is looked up in the configured keyring file. Keyring uses keyname=hex format. Create key `default` by default; user will add more keys as needed. Add `-encrypt-secret <keyname>` cmdline arg which reads secret from stdin, strips leading/trailing whitespace, encrypts and prints.
 

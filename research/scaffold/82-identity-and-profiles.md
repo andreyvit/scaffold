@@ -2,6 +2,8 @@
 
 Confirmed by Andrey, 2026-10-19. Product choice with a recommended default, not a universal requirement.
 
+Current recipe: [identity and workspaces](../../skills/scaffold/references/accounts.md).
+
 ## Default
 - One login identity may belong to multiple companies.
 - Everything beyond login identity belongs to a per-company profile: even name, plus avatar, title, biography and other profile fields.

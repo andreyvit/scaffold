@@ -2,6 +2,8 @@
 
 Confirmed by Andrey, 2026-10-20. [Analytics goals and operation](83-business-and-onboarding.md).
 
+Current recipe: [analytics and experiments](../../skills/scaffold/references/analytics.md).
+
 ## Early default
 Store raw events. Early on, we do not yet know which questions or definitions will matter; preserve flexibility to change our minds and reprocess history.
 

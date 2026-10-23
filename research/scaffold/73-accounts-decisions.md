@@ -1,42 +1,35 @@
-# Accounts: decisions before implementation
+# Accounts: current decisions and product choices
 
-Identity/profile default confirmed; other choices remain exploration. [Identity decision and reasons](82-identity-and-profiles.md). [Happy Grid](10-happy-grid.md) has product-specific identity rules; do not silently generalize them.
+Use [identity/workspaces](../../skills/scaffold/references/accounts.md), [login](../../skills/scaffold/references/login.md), [permissions](../../skills/scaffold/references/permissions.md) and [access auditing](../../skills/scaffold/references/customer-data-access.md) for the current rules. [Identity rationale](82-identity-and-profiles.md) and the [decision record](78-confirmed-decisions.md) preserve the interview.
 
-| Decision | Options | Ask |
-|---|---|---|
-| Need an account? | Convenience favors use before login; **signup timing follows business funnel and measurement** | What monetization/conversion hypothesis sets the gate, and how will it be tested? |
-| Data owner | **Same workspace/account model for individuals and companies**; individual owns personal workspace | Who keeps data when a member leaves? |
-| Person across companies | **Default: shared login + per-company profiles**; separate logins supported internally | What product requirement justifies a different default? |
-| Customer vs staff | **Deferred; no selected default** | Revisit company ownership/deletion and surface overlap after Andrey has reflected. |
-| Joining | Self-signup; invitation; enterprise provisioning | Who may create, join or claim a company? |
-| Login | **Email code initially when email is available; passkeys offered from the start (C71)**; other methods product-specific | Enrollment, recovery and stronger company requirements |
-| Enterprise identity | Optional federation; enforced SSO; provisioning/deprovisioning | Who is authoritative, and how fast must removal take effect? |
-| Extra assurance | Normal login; step-up; stronger admin policy | Which actions merit renewed proof? What assurance does a passkey actually provide? |
-| Recovery | **Total lockout is a one-off; selected staff may repair raw data (C83)** | Case-specific ownership proof; no standard total-lockout flow or automatic admin override |
-| Customer-data access | **Superstaff allowed; audit meaningful access by any user (C62)** | Project-specific exceptions, audit visibility and retention |
-| Authorization | **Permissions, roles and default roles from the start (C63)**; offer role-customization UI as an optional feature | Is customization UI authorized for this product? Which permissions and default roles fit it? |
-| Session | Server session; scoped API token; host-bound session | Need immediate revocation, third-party clients or distributed verification? |
-| Lifecycle | Rename; merge; transfer; suspend; delete/export | Which operations preserve history and which must sever access? |
+## Confirmed
+- Shared login with per-company profiles, including name. Personal workspaces use the same ownership model (C19–21).
+- Prepare for simultaneous logins internally; choose exposed switching/extra-login UI per product. Shared identities follow strictest combined company auth requirements; incompatible requirements can use separate identities.
+- Company admins cannot directly change shared login email or hand over reset passwords. Ordinary account changes use first-class flows.
+- Email codes initially where email can be sent; passkeys from the start, automatically offered after email login with confirmation. Email remains available under company policy (C71–72).
+- Total lockout is a one-off support case, with selected staff permitted raw-data repairs; ownership proof remains case-specific. No blanket org-admin override or generic editor UI selected (C83).
+- Permissions, roles and default roles in code from the start. Offer role-customization UI as a separate authorized feature (C63).
+- Superstaff may access client data. Audit meaningful access by any user: detail views count, names in lists do not, bulk operations get one entry by default (C62).
+- Signup timing follows the measured business funnel; convenience favors use before login all else equal (C24–28).
+- Export and deletion required, with JSON files in a ZIP as minimum export; ordinary deletion recovery defaults to 30 days (C86–87).
 
-## Candidate starting branches
-- **Consumer:** personal workspace owned by the individual (confirmed); signup timing remains product-specific; email codes and passkeys follow C71, federation is a product choice.
-- **B2B:** company-owned data; explicit membership; lifecycle and SSO rules chosen together.
-- **Embedded:** follow the host’s identity contract; test host logout and revocation.
+## Choose for the actual product
+These are prompts when relevant, not a new generic interview checklist.
 
-Not approved: treating the identity default as universal, exposing multi-login UI in every product, passkeys-only recovery, custom cryptographic protocols, or “admins bypass everything.”
+| Concern | Concrete decision |
+|---|---|
+| Membership | Who creates/joins a workspace, who owns its data after someone leaves, and which transfer/merge operations are needed? |
+| Enterprise identity | Is federation/provisioning needed, who is authoritative, and how quickly must removal take effect? |
+| Assurance and sessions | Which actions need renewed proof, and what revocation/session behavior meets the threat model? |
+| Roles and support | Which permissions/default roles fit, which UI is authorized, and who may make exceptional repairs? |
+| Data lifecycle | Which personal/shared/company records belong in export or erasure, and how do history, audit and backups behave? |
 
-## Required proof in the eventual recipe
-Cross-tenant denial; removed-member access; recovery abuse; credential changes; session revocation; safe audit detail; signup/login/recovery outcome metrics. Exact implementation follows [modern security research](76-modern-options.md).
+Consumer apps start with personal workspaces; B2B apps need company membership/ownership. Embedded products must account for the host's identity contract. These contexts do not override confirmed defaults without a concrete reason.
 
-## Customer-data access — confirmed C62
-Superstaff may inspect client data. Audit access by any user at the meaningful-action level: opening customer details counts, merely seeing names in a list does not. Bulk exports produce a bulk-operation entry rather than an enumeration of customers touched by default. This does not settle staff/customer identity separation or grant all staff every permission. [Details](92-customer-data-access.md).
+## Deferred
+Staff/customer record separation has **no approved default** (C23). Keep the earlier C22 candidate historical. Customer ownership/deletion concerns do not alone select a model or legal interpretation.
 
-## Permissions and roles — confirmed C63
-Include permissions and roles in the code from the start, with default roles. Offer role-customization UI as a separate feature; implement it only when authorized for the product. Do not confuse a capable internal model with a decision to expose all its capabilities in the UI.
+## Derived verification guidance
+Test cross-workspace denial, removed-member access, credential/session changes, meaningful audit records and the actual export/deletion flow. Exercise real login as well as fixture shortcuts; verify Apple email-code autofill on supported devices. For a one-off recovery, assess ownership proof for that case instead of inventing a standard lockout product feature.
 
-Supersedes the assistant's fixed-roles-vs-custom-roles framing. Exact permissions, default role names and UI design remain product-specific. [Recipe](../../skills/scaffold/references/permissions.md).
-
-## Login methods — confirmed C71
-Email codes by default where sending email is possible; retain codes even when including a link, so email can be read on another device. Require Apple code recognition/autofill. Passkeys offered from the start with smooth “passkey or email” UX; other methods are product choices. Discoverable passkeys technically allow login before email entry; details and validation limits in [login methods](97-login-methods.md).
-
-C72: after email-code signup/login, automatically offer passkey creation with a normal confirmation prompt; email-code login remains available afterward. User explicitly accepts confirmation; no silent-creation requirement. [Enrollment findings](97-login-methods.md).
+The [security scan](76-modern-options.md) is research context, not an approved authentication protocol. Current browser/provider behavior still needs validation when implementing.

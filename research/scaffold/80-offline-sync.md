@@ -2,6 +2,8 @@
 
 Confirmed by Andrey, 2026-10-19, direct interview answer. Supported optional architecture; never enabled by default.
 
+Current recipe: [optional offline sync](../../skills/scaffold/references/offline-sync.md).
+
 ## Default
 Use ordinary server processing/rendering, especially on web. Keep the change system expandable to offline editing; do not pay its substantial complexity upfront. Use explicit replayable change objects from day one for undo and auditing; [changeset design](81-changesets.md).
 

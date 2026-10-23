@@ -1,6 +1,59 @@
 # Confirmed decisions
 
-Source: Andrey's direct response in this chat, 2026-10-18. Overrides earlier hypotheses. Historical-source authorship remains separately labelled.
+Source: Andrey's direct interview answers, 2026-10-18 through 2026-10-23. These override earlier hypotheses; historical-source authorship remains separately labelled.
+
+## Current recipe map
+
+All C1–C87 entries are retained below in interview order. Later clarifications control current recipes. Consolidation adds no new user decisions. Start with [the whole-app recipe](../../skills/scaffold/references/app-web.md) or [review overview](104-interview-overview.md).
+
+| Decisions | Current home |
+|---|---|
+| C1–6, C20 | [Values and limits](../../skills/scaffold/references/values.md) |
+| C7, C40–41 | [Native direction](../../skills/scaffold/references/values.md), [iOS organization](../../skills/scaffold/references/ios-layering.md); modern internals deferred |
+| C8 | [Optional offline sync](../../skills/scaffold/references/offline-sync.md) |
+| C9–18 | [Changes, undo and replay](../../skills/scaffold/references/changes.md) |
+| C19, C21–23 | [Identity/workspaces](../../skills/scaffold/references/accounts.md); staff/customer split deferred |
+| C24–28, C30–34 | [Business analytics and experiments](../../skills/scaffold/references/analytics.md) |
+| C29 | [Optional session replay](../../skills/scaffold/references/session-replay.md) |
+| C35–36 | [One process, EDB/Bolt](../../skills/scaffold/references/app-web.md#starting-architecture) |
+| C37, C64–65, C68 | [Web rendering, rich pages and unresolved templating](../../skills/scaffold/references/web-rendering.md) |
+| C38–39 | [Go layering](../../skills/scaffold/references/go-layering.md) |
+| C42 | [Error handling](../../skills/scaffold/references/error-handling.md) |
+| C43 | [Testing](../../skills/scaffold/references/testing.md) |
+| C44–46 | [AI development harness](../../skills/scaffold/references/development-harness.md) |
+| C47–49 | [Packaging, restart and manual recovery](../../skills/scaffold/references/go-deployment.md) |
+| C50–55 | [Backups, keys, retention and deferred WAL](../../skills/scaffold/references/backups.md) |
+| C56–57 | [Optional standby](../../skills/scaffold/references/standby.md) |
+| C58–60 | [Migrations](../../skills/scaffold/references/migrations.md) |
+| C61 | [Jobs](../../skills/scaffold/references/jobs.md) |
+| C62 | [Customer-data access audit](../../skills/scaffold/references/customer-data-access.md) |
+| C63 | [Permissions and optional customization UI](../../skills/scaffold/references/permissions.md) |
+| C66–67 | [Frontend language/build/CSS](../../skills/scaffold/references/frontend-tooling.md) |
+| C69–70 | [Library extraction and compatibility](../../skills/scaffold/references/library-boundaries.md) |
+| C71–72, C83 | [Login, passkey enrollment and one-off lockout](../../skills/scaffold/references/login.md) |
+| C73–74 | [Upload storage and transport](../../skills/scaffold/references/uploads.md) |
+| C75–81 | [Observability requirements and deferred design](../../skills/scaffold/references/observability.md) |
+| C82 | [Transactional email](../../skills/scaffold/references/email.md) |
+| C84 | [Payments](../../skills/scaffold/references/payments.md) |
+| C85 | [API style](../../skills/scaffold/references/apis.md) |
+| C86 | [Ordinary deleted-data recovery](../../skills/scaffold/references/deleted-data.md) |
+| C87 | [Required export and deletion](../../skills/scaffold/references/data-rights.md) |
+
+## Read clarifications together
+
+- C28 clarifies C5: business measurement goals precede privacy implementation choices.
+- C11 replaces C10's tentative boundary: each changeset is atomic within a transaction; bulk work spans changesets/transactions.
+- C14 refines C13: effects may observe conditions whenever convenient; later changes do not retract already scheduled work.
+- C23 withdraws C22's staff/customer split default; neither model is selected.
+- C32 makes 60 seconds the default **if** buffering/flushing or throttling is used, refining C31's examples.
+- C45–46 resolve C44's initially open fixture-login and fail-fast behavior.
+- C49 settles C48's failed-deploy recovery as manual by default; C57 refines C56's standby readiness checks.
+- C53 defers the WAL possibility in C16 until EDB supports it; snapshots currently determine off-server recovery.
+- C78 qualifies C77: avoid the Protobuf dependency, but allow a small handwritten OTLP encoder in principle. C80 records the file/index preference; C81 defers detailed choices.
+- C83 narrows the recovery scope in C19/C71–72: total lockout is a one-off, ordinary account flows remain first-class.
+- C85 is situational: RPC JSON for operations, REST allowed for CRUD. C86's ordinary recovery is separate from C87's required deletion/export.
+
+## Interview record
 
 - **C1 · V1–V13 accepted**, with V7/V12 clarified below. No need to reconfirm the whole list.
 - **C2 · Ownership first.** Build it yourself by default; dependencies require a concrete reason. Ownership usually buys control and simplicity. Stronger than the earlier neutral maintenance tradeoff.
@@ -12,7 +65,7 @@ Source: Andrey's direct response in this chat, 2026-10-18. Overrides earlier hyp
 
 The Steve Jobs analogy explains the value; no exact quotation or factual attribution is needed. The observation about companies moving native is not independently verified and is not used as evidence.
 
-Next: choose supported requirement variants, then architecture decisions. [First scope interview](79-next-scope.md).
+Historical handoff: [first scope interview](79-next-scope.md). The current work cursor is [STATE](STATE.md#resume-here).
 
 ## 2026-10-19 · C8 · Optional offline architecture
 Support offline editing and multi-device sync in the initial recipe set, but enable only when needed. Prefer simple timestamp-based version selection where losing competing edits is acceptable; otherwise revision-gated client rebasing. Normal server processing/rendering stays the default. [Mechanisms, reasons and open details](80-offline-sync.md).

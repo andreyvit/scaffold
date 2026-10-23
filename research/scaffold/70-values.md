@@ -19,6 +19,8 @@ Confirmed by Andrey in this chat, 2026-10-18; V7/V12 strengthened and V14 added.
 | V13 | Understand what the machine actually pays for. | Candidate: N1; statement: [hash benchmarks and EDB](31-small-libraries.md); inference: [Bubblehouse storage](21-bubblehouse.md). | Not blanket micro-optimization; measure total cost. |
 | V14 | Prefer simplicity and elegance; think through the details. | Confirmed explanation: this chat; [examples and limits](64-craft-and-ux.md). | Spend modest extra attention when other costs are comparable. Compromise for concrete cost; avoid sloppy details that turn future changes into a minefield. |
 
+Current skill guidance: [values](../../skills/scaffold/references/values.md). The evidence and qualifications below remain the source record.
+
 ## Defaults and convenience — confirmed 2026-10-19
 **V15: Choose smart defaults, especially for decisions users will not spend attention on.** Product-specific does not mean recommendation-free. Explain the value, cost and exception.
 

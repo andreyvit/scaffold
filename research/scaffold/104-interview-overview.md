@@ -1,34 +1,45 @@
-# Interview overview · 2026-10-23
+# Consolidation review · 2026-10-23
 
-Requested by Andrey to understand progress and remaining scope. Current confirmations reach C87. This is a working map, not a commitment to interview every implementation detail or require every feature in every product. Resume from [STATE](STATE.md).
+The general server/web interview through C87 is consolidated for review. No interview question is pending. This is a documentation synthesis, not a claim that every mechanism is settled or implemented. [STATE](STATE.md#resume-here) remains the work cursor.
 
-## Largely settled
-- Engineering values and ownership/dependency stance.
-- Server/web shape: Go, one process, EDB/Bolt, layering, SSR/Turbo/Stimulus, rich-page exceptions, plain JS and CSS direction.
-- Own-client APIs: RPC-style JSON for operation-oriented APIs; REST may fit CRUD.
-- Changes/undo/history and offline direction; 30-day recovery for ordinary deleted data. Required data deletion/export; minimum export is a ZIP of JSON files containing all user data. Remaining machinery left to implementation experience.
-- Shared login/company profiles, personal workspaces, permissions/roles, customer-data audit, email codes and passkey enrollment.
-- Testing and AI development harness; packaging, deployment, backups/standby and migrations.
-- Upload storage/transport, library boundaries, transactional email (Postmark or Mailchimp, via jobs), and payment provider (Stripe for paid web products).
-- Analytics/business measurement requirements and broad observability requirements. Concrete observability tooling is deferred.
+## Review in this order
+1. [Go/server/web whole-app recipe](../../skills/scaffold/references/app-web.md): architecture, day-one foundations, optional features, recovery/data windows and implementation guidance.
+2. Newly extracted recipes: [values](../../skills/scaffold/references/values.md), [changes/undo/history](../../skills/scaffold/references/changes.md), [identity/workspaces](../../skills/scaffold/references/accounts.md), [analytics/experiments](../../skills/scaffold/references/analytics.md), [optional offline sync](../../skills/scaffold/references/offline-sync.md).
+3. [Skill and recipe index](../../skills/scaffold/SKILL.md): targeted reading instead of recursively loading research.
+4. [Decision map](78-confirmed-decisions.md#current-recipe-map): all C1–C87 mapped to their current homes, with supersessions called out.
 
-## Remaining work after the general-default interview
-The current server/web pass has enough direction to consolidate. This is the assistant's scope assessment, not a new user choice. Avoid extending the interview with obvious engineering or hypothetical product decisions.
+## What changed
+The whole-app guide now assembles the existing small recipes. Confirmed foundations previously buried in research have reusable recipe files. Architecture, accounts and operations summaries reflect the final interview state. Historical scope menus and stale next-question pointers are labelled; original evidence and the chronological decision record remain available.
 
-- **Account lifecycle:** membership, ownership transfer and session behavior follow concrete product/security requirements. Total lockout is a one-off with selected staff repair capability (C83).
-- **Data lifecycle:** deletion/export required, ZIP of JSON minimum (C87); ordinary recovery 30 days (C86). Ownership boundaries, erasure/retention mechanics, UI, imports and shutdown plans follow actual requirements.
-- **APIs/integrations:** RPC-style JSON for operations, REST may fit CRUD (C85). Third-party contracts, versioning and webhooks depend on actual consumers; routine correctness is engineering work.
-- **Payments:** Stripe for paid web products (C84); pricing, billing models and features are product decisions.
-- **Background jobs:** main-DB queue, transaction coupling, in-process execution and no auto-retry after panic are settled. Expected-failure retries and ambiguous external outcomes depend on the operation; ask only if a real unresolved tradeoff appears.
+No new user decisions were added. Implementation/verification guidance is labelled separately. Existing JSON configuration and environment rules remain part of the recipe; config wording and a broken sentence were cleaned up without changing the scheme.
 
-Full-text search, localization or other feature recipes can be added when relevant; they do not automatically extend the interview.
+## Qualifications worth checking
+- Changesets stay atomic; bulk work spans them. Recovery applies recorded simple changes without regenerating effects. Detailed framework mechanics still need experience.
+- Required foundations do not authorize all optional UI: role customization, extra-login surfaces, offline editing and replay rollout remain separate choices.
+- The no-data-loss objective is stronger than current hourly snapshot recovery. Replay compatibility, backup retention, deleted-data recovery and analytics retention are separate windows.
+- Metrics/logging/spans/analytics are required now, while concrete observability tooling is deferred. Existing analytics storage/retention decisions still apply.
+- Email codes remain available after automatically offered passkey enrollment, subject to company requirements. Total lockout is a one-off repair case.
+- Export/deletion are required capabilities; ZIP of JSON is the export minimum. Shared-data boundaries and permanent erasure are product-specific, distinct from ordinary 30-day deletion recovery.
 
-## Separate or deliberately deferred work
-- **Observability/anomaly tooling and detailed design:** wait for Andrey's personal experiments (C81); all options saved.
-- **Server templating:** owned component-capable language is a separate strategic project (C68).
-- **Staff versus customer identities:** wait for reflection; no default selected (C23).
-- **Change/operation taxonomy and detailed mechanics:** refine through concrete implementation; don't restart the abstract modeling interview.
-- **Native mobile implementation recipes:** native direction and iOS organizational preferences are settled. Modern Apple internals need the separate research step (C41); Android internals have not had a comparable detailed pass.
+## Decisions for an actual product
+Do not turn these into a mandatory generic interview. Recommend defaults from context and ask only when a concrete tradeoff remains.
 
-## Completion work after the useful interview questions
-Consolidate the confirmed defaults into coherent whole-app/feature recipes, reconcile stale hypothesis tables against current decisions, and record remaining product-specific choices as prompts at scaffold time. This is synthesis/implementation work, not more questions for Andrey. Do not promise numerical percentage completion from the decision count.
+| Area | What still needs context |
+|---|---|
+| Accounts | Membership/invitations, ownership transfer, sessions and stronger authentication policies |
+| Data lifecycle | Shared/company ownership boundaries, actual export/erasure behavior, retention interactions and UI |
+| APIs/integrations | Actual consumers, public compatibility, webhooks and operation-specific external-effect handling |
+| Payments | Pricing, billing model, entitlements and checkout; Stripe is the paid-web default |
+| Reliability | Failure scenarios, acceptable loss/downtime, resource costs and tested operating procedures |
+| Business learning | Funnel, events, experiments, evaluation and ongoing ownership |
+
+Full-text search, localization and other feature recipes can be added when relevant. Imports and shutdown plans were not selected as universal day-one features.
+
+## Deliberately deferred or separate
+- **Observability/anomaly tools and detailed design:** await Andrey's experiments (C81). [Backend options, including Jaeger](100-lightweight-inspectability.md), [anomaly options](101-lightweight-anomaly-detection.md) and [file/index discussion](102-file-based-observability.md) remain saved.
+- **Server templating:** owned component-capable language is separate strategic work (C68); no interim engine selected.
+- **Staff/customer identities:** await reflection; C23 withdrew C22's default.
+- **Change/operation taxonomy and mechanics:** refine through concrete implementation; no further abstract interview now.
+- **Native mobile internals:** native direction and iOS organization settled. Modern Apple internals need the separate research step (C41); Android has not had a comparable detailed pass.
+
+The next step is Andrey's review. There is no automatic new research phase, tool trial or application implementation in this consolidation task.

@@ -2,7 +2,7 @@
 
 Run small migrations automatically at startup, before readiness. Default budget: **5 seconds per migration**. Keep overall startup compatible with brief deployments; this is not a 5-second total startup budget.
 
-Move large rewrites to explicit preview-and-execute maintenance operations. Follow the bulk-operation policy for transaction boundaries and resumption; do not assume automatic resume.
+Move large rewrites to explicit preview-and-execute maintenance operations. Follow the [bulk-operation policy](changes.md#processing-and-transactions) for transaction boundaries and resumption; do not assume automatic resume.
 
 Enforce the budget through testing against representative data sizes. If a startup migration exceeds 5 seconds at runtime, let it finish safely and log the overrun; do not impose a runtime cutoff for this budget.
 

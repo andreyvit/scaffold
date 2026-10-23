@@ -2,6 +2,8 @@
 
 Source: Andrey's direct interview answer, 2026-10-19.
 
+Current recipe: [analytics and experiments](../../skills/scaffold/references/analytics.md).
+
 ## Signup timing — confirmed decision rule
 - All else equal, favor customer convenience: useful access before login.
 - Do not prescribe anonymous-first onboarding universally. Evaluate signup timing within the overall monetization/conversion funnel.
@@ -42,7 +44,7 @@ Privacy is valued **within business requirements**, not as a reason to remove ne
 - Revenue and expense drivers: what is charged for and what costs money.
 - Useful cohort grouping and analysis across these dimensions.
 
-Implementation may use anonymization, differential privacy or other techniques as appropriate to the user-base size. These are possibilities, not requirements to deploy sophisticated machinery immediately. Exact event capture, identity, retention, tooling and privacy mechanisms remain open.
+Implementation may use anonymization, differential privacy or other techniques as appropriate to the user-base size. These are possibilities, not requirements to deploy sophisticated machinery immediately. Exact event capture, analytics identity, tooling and privacy mechanisms remain open. C34 below selects finite raw-event retention; aggregate retention remains separate.
 
 This supersedes the assistant's explicit-events-only recommendation based on privacy. Broad measurement does not yet decide whether to record screen/session content.
 

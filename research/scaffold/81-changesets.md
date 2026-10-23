@@ -2,6 +2,8 @@
 
 Source: Andrey's direct interview answer, 2026-10-19.
 
+Current recipe: [changes, undo and history](../../skills/scaffold/references/changes.md).
+
 ## Confirmed direction
 Use explicit replayable change objects from day one, including online-only apps. Undo and auditing justify them independently of offline sync.
 
@@ -100,7 +102,7 @@ Local `edb/research/kvo/README.md` explicitly separates experimental mutation/ch
 
 These are remaining design questions, not approved requirements. Ledger snapshots and bounded replay are selected above; avoid importing additional architectural obligations from a label.
 
-## Interview handoff
-Enough direction for an initial design; remaining machinery should be refined through concrete implementation experience. Next topic: B2B identity across companies, in [accounts](73-accounts-decisions.md).
+## Historical interview handoff
+Enough direction for an initial design; remaining machinery should be refined through concrete implementation experience. The interview continued with [accounts](73-accounts-decisions.md). Use [STATE](STATE.md#resume-here) for current work.
 
 C86: ordinary user-deleted data has a [30-day default recovery window](108-deleted-data-recovery.md). This does not reopen the change/undo model or select a storage representation.

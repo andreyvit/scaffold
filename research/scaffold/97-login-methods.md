@@ -32,7 +32,7 @@ Sources: [Apple iOS 17 release notes](https://support.apple.com/en-ie/118723), [
 ### Authentication strength and policies
 An email code used alone is passwordless single-factor login, not automatically two-factor authentication despite OS terminology. Passkeys authenticate with a site-bound cryptographic key; a server stores the public key, and the provider signs the challenge. Do not treat an optional email route as having the same phishing resistance as passkeys. Existing company login requirements still apply (82).
 
-C72 selects enrollment following email-code signup/login and continued email login. Remaining: enrollment prompt details, credential management, recovery when email is unavailable and stronger assurance requirements. No exact code length, expiry or server library selected.
+C72 selects enrollment following email-code signup/login and continued email login. Remaining: enrollment prompt details, credential management and stronger assurance requirements. C83 below settles total lockout as a one-off support case; ordinary account-change flows remain first-class. No exact code length, expiry or server library selected.
 
 [Recipe](../../skills/scaffold/references/login.md).
 

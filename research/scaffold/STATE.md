@@ -6,9 +6,9 @@ Started: 2026-10-18 (Maldives). Initial source pass and expanded LifeBase/hiring
 ## Resume here
 Canonical repository: `/Users/andreyvit/Developer/andreyvit/scaffold`. Research moved here from `~/env` on 2026-10-23. Continue in this repo.
 
-**Next action: consolidate the general server/web defaults; no interview question pending.** C87 makes user-data deletion/export required, with a ZIP of JSON files containing all the user's data as minimum viable export. Preserve this as a product requirement, not a blanket legal interpretation or selection of an export UI/schema.
+**Next action: Andrey reviews the consolidated recipes; no interview question pending.** Start with the [review overview](104-interview-overview.md) and [Go/server/web recipe](../../skills/scaffold/references/app-web.md). The [decision map](78-confirmed-decisions.md#current-recipe-map) covers C1–C87 and flags supersessions. Consolidation added no user decisions and did not implement an app.
 
-The [overview](104-interview-overview.md) now separates remaining product/implementation decisions from deferred research. Given the request to power through and avoid obvious/product-only questions, the current general-default pass has enough direction for synthesis. This is the assistant's scope judgment, not confirmation that every architecture detail is settled. Reopen a question only for a concrete unresolved tradeoff.
+The [overview](104-interview-overview.md) separates review points, product/implementation decisions and deferred research. The useful general-default interview is consolidated; this is a scope judgment, not confirmation that every architecture detail is settled. Reopen a question only for a concrete unresolved tradeoff.
 
 Keep C86's ordinary deletion recovery window separate from explicit erasure mechanics and retained backups/history. Keep C85 situational: RPC-style JSON for operations; REST may suit CRUD. Jobs' expected-failure behavior depends on the operation; no universal new retry policy inferred.
 
@@ -16,7 +16,7 @@ Observability, modern Apple internals, staff/customer identity separation, detai
 
 Interview **one question at a time, max terse**, with all necessary context. After each answer, update this resume block, append state/confirmation records, and update the relevant topic and recipe. Preserve reasons and qualifications. Never count an assistant proposal as user approval. Ask only about real tradeoffs, supported requirements or values; derive obvious engineering consequences and verify feasibility yourself.
 
-Later: consolidate server/web recipes; resolve remaining auth/permissions and jobs details against actual product needs; observability is deferred pending personal experiments (C81). Modern Apple internals require a separate later research step; staff/customer identity separation and operation taxonomy remain deferred. Server templating is separate strategic work (C68), with an owned component-capable language planned. Do not reopen those now. Older “Next” entries below and the scope/question outlines are historical, not the current cursor.
+Later: apply review corrections; resolve remaining auth/permissions and jobs details against actual product needs; observability is deferred pending personal experiments (C81). Modern Apple internals require a separate later research step; staff/customer identity separation and operation taxonomy remain deferred. Server templating is separate strategic work (C68), with an owned component-capable language planned. Do not reopen those now. Older “Next” entries below and the scope/question outlines are historical, not the current cursor.
 
 ## Contract
 - Work sequentially: Happy Grid → Bubblehouse → personal repos → Heynote → Zoo v1/skills → LifeBase → Ulysses; revisit earlier sources when new evidence helps.
@@ -31,7 +31,7 @@ Later: consolidate server/web recipes; resolve remaining auth/permissions and jo
 - [Start here](README.md): short index.
 - [Values](70-values.md), [requirements](71-requirements.md), [architecture](72-architecture-decisions.md), [accounts](73-accounts-decisions.md).
 - [Operation](74-operations.md), [recipe shape](75-recipe-shape.md), [modern scan](76-modern-options.md), [method](77-research-method.md).
-- [Interview](01-questions.md): remaining questions; confirmed answers in [78](78-confirmed-decisions.md), next scope round in [79](79-next-scope.md).
+- [Decision map and interview record](78-confirmed-decisions.md); [historical question outline](01-questions.md) and [historical scope outline](79-next-scope.md) are not pending interview queues.
 - [Coverage](03-coverage.md): precise limits; [checkout inventory](02-repositories.tsv); source files retain evidence and earlier questions.
 
 ## Initial setup — historical
@@ -638,3 +638,11 @@ Start at “Resume here,” then read only relevant confirmed decisions and topi
 - Added source/recipe and links; preserved actual ownership boundaries and ordinary 30-day recovery scope without inventing erasure deadlines or import support.
 - Reconciled the stale async-work matrix row against confirmed job defaults. Updated overview to treat remaining generic items as product/implementation work unless a concrete tradeoff arises.
 - No new interview question pending. General server/web pass is ready for consolidation; explicitly deferred branches stay deferred. This scope assessment is not a new user-approved architecture decision.
+
+## 2026-10-23 — Sync and consolidation for review
+- User requested sync, best-effort consolidation, then another sync. First sync committed/pushed the final interview defaults as `664764c03333c4408f393dfecc29f72fa1330517`.
+- Added a whole-app Go/server/web recipe and reusable values, changes/undo/history, accounts, analytics/experiments and optional offline-sync recipes. Connected existing subsystem recipes and config/environments.
+- Replaced recursive research loading with targeted recipe navigation. Mapped C1–C87 to current homes; preserved chronological answers and clarified supersessions.
+- Reconciled architecture/accounts/operations summaries, historical scope menus, login lockout wording and stale observability questions. No new user decisions, tool trials, application code or dependency selections.
+- Prepared the review overview and updated this cursor to review. Deferred branches stay deferred; product choices remain contextual. Repository delivery status is in Git and the final sync report.
+- Validation: checked 107 Markdown files, all 554 local links/anchors, complete C1–C87 recipe coverage, unchanged chronological answers, complete recipe navigation and whitespace/conflict markers. No application code changed; no application tests needed.

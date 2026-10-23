@@ -1,8 +1,13 @@
 # Recipe shape
 
-Proposal. Keep research and source history here; publish only confirmed defaults and useful alternatives into the skill.
+Keep research and source history here; publish confirmed defaults and clearly labelled implementation guidance into the skill.
 
-## Small linked files
+## Implemented shape · 2026-10-23
+The [skill index](../../skills/scaffold/SKILL.md) routes whole-app work to [app-web.md](../../skills/scaffold/references/app-web.md), with linked subsystem recipes. Values, changes, accounts, analytics and offline sync now have their own files alongside the existing recipes. Config/environments remain linked; no duplicate configuration scheme.
+
+The [decision map](78-confirmed-decisions.md#current-recipe-map) connects all interview decisions to current recipes. Read relevant recipes and use research for evidence when needed; do not recursively load every linked source. Preserve the distinction between confirmed defaults, derived guidance, product choices and deferred work.
+
+## Historical proposed file menu
 - `values.md`: approved values, reasons, conflict rules.
 - `app-web.md`, `app-ios.md`, `app-android.md`: choose profile; assemble subsystems; layout; startup; first working flow; release proof.
 - `web-rich-page.md`, `web-spa.md`: explicit alternatives to the SSR default.

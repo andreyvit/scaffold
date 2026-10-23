@@ -1,14 +1,14 @@
 # Scaffold research
 
-Initial source research and expanded LifeBase/hiring pass complete, with [coverage gaps](03-coverage.md). Architecture interview ongoing; [confirmed decisions](78-confirmed-decisions.md) currently reach C87. **Resume from the exact unanswered question in [STATE.md](STATE.md#resume-here).**
+Initial source research and expanded LifeBase/hiring pass complete, with [coverage gaps](03-coverage.md). General server/web decisions through C87 are consolidated for review; no interview question is pending. **Resume from [STATE.md](STATE.md#resume-here).**
 
-[Where the interview stands and what remains](104-interview-overview.md)
+[Review overview and remaining scope](104-interview-overview.md) · [Whole-app recipe](../../skills/scaffold/references/app-web.md) · [Recipe index](../../skills/scaffold/SKILL.md)
 
 ## Start here
 1. [Confirmed values](70-values.md)
-2. [Requirements to support](71-requirements.md)
+2. [Decision map and clarifications](78-confirmed-decisions.md#current-recipe-map)
 3. [Architecture decisions](72-architecture-decisions.md)
-4. [Historical scope outline](79-next-scope.md) · [Interview outline](01-questions.md)
+4. Historical proposals: [requirements menu](71-requirements.md) · [scope outline](79-next-scope.md) · [interview outline](01-questions.md)
 
 [Latest decisions](78-confirmed-decisions.md) · [Craftsmanship and UX evidence](64-craft-and-ux.md)
 

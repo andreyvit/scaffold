@@ -3,50 +3,32 @@ name: scaffold
 description: Use Andrey Tarantsov's opinionated templates and specs to start a new feature or a whole new project with the right pragmatic design.
 ---
 
-Use when user requests or project already uses Andrey Tarantsov's scaffolds.
+Use when requested or when the project already uses Andrey Tarantsov's scaffolds. Existing project decisions override these defaults unless the user requests a change.
 
-See references/*.md for the right scaffold. Read all referenced files recursively. Existing project's decisions override scaffolds unless user requests an upgrade.
+## How to apply
+1. Read [values](references/values.md). For a whole Go/server/web app, use [the assembled recipe](references/app-web.md).
+2. Read the subsystem recipes relevant to the task, including linked rules the implementation depends on. Research links supply reasons and evidence; do not recursively load the research archive.
+3. Distinguish required foundations, optional capabilities and product UI. Recommend contextual defaults; ask only about real unresolved tradeoffs. Derive routine implementation consequences and verify feasibility yourself.
+4. Implement and verify actual behavior using the [testing](references/testing.md) and [development harness](references/development-harness.md) defaults.
+5. Preserve project decisions and reasons. Do not turn a candidate tool, historical source or deferred question into an approved default.
 
-For session capture/storage/playback, use [session replay](references/session-replay.md).
+These files are design recipes, not a claim that a starter app or every framework described here is implemented.
 
-For Go application structure, use [layering](references/go-layering.md).
+## Recipe index
 
-For iOS application structure, use [iOS layering](references/ios-layering.md).
+| Area | Recipes |
+|---|---|
+| Whole app and structure | [Go/server/web](references/app-web.md), [Go layering](references/go-layering.md), [library boundaries](references/library-boundaries.md) |
+| State and ownership | [Changes/undo/history](references/changes.md), [accounts/workspaces](references/accounts.md), [optional offline sync](references/offline-sync.md) |
+| Access | [Login](references/login.md), [permissions](references/permissions.md), [customer-data access audit](references/customer-data-access.md) |
+| Web | [Rendering](references/web-rendering.md), [frontend tooling](references/frontend-tooling.md), [APIs](references/apis.md) |
+| Business and integrations | [Analytics/experiments](references/analytics.md), [session replay](references/session-replay.md), [jobs](references/jobs.md), [email](references/email.md), [payments](references/payments.md), [uploads](references/uploads.md) |
+| Data lifecycle | [Export/deletion](references/data-rights.md), [deleted-data recovery](references/deleted-data.md), [migrations](references/migrations.md) |
+| Development | [Testing](references/testing.md), [AI harness](references/development-harness.md), [error handling](references/error-handling.md) |
+| Operation | [Configuration](references/app-config.md), [environments](references/app-environments.md), [deployment](references/go-deployment.md), [backups](references/backups.md), [optional standby](references/standby.md), [observability](references/observability.md) |
+| Native mobile | [iOS layering](references/ios-layering.md); native UI is settled, modern internals remain separate work |
 
-For expected/unexpected failures, use [error handling](references/error-handling.md).
+## Deferred work
+Observability/anomaly details await Andrey's experiments. Component-capable templating is a separate strategic project. Staff/customer identity separation awaits reflection. Refine detailed changes/operations machinery through implementation. Modern Apple internals need later research; Android implementation recipes remain to be developed.
 
-For test scope and coverage, use [testing](references/testing.md).
-
-From project start, include the [AI development harness](references/development-harness.md).
-
-For Go production packaging, use [deployment](references/go-deployment.md).
-
-For off-server backups and restore, use [backups](references/backups.md).
-
-For background jobs, use [jobs](references/jobs.md).
-
-For superstaff access and customer-data auditing, use [customer data access](references/customer-data-access.md).
-
-For authorization foundations and optional role customization, use [permissions](references/permissions.md).
-
-For SSR, progressive enhancement and rich-page alternatives, use [web rendering](references/web-rendering.md).
-
-For JavaScript, bundling and TypeScript exceptions, use [frontend tooling](references/frontend-tooling.md).
-
-For project-local units and authorized library extraction, use [library boundaries](references/library-boundaries.md).
-
-For email-code and passkey login, use [login](references/login.md).
-
-For uploaded-file storage and delivery, use [uploads](references/uploads.md).
-
-For metrics, analytics, tracing and logging from project start, use [observability](references/observability.md).
-
-For transactional email delivery, use [email](references/email.md).
-
-For payments in paid web products, use [payments](references/payments.md).
-
-For data APIs used by the app's own clients, use [APIs](references/apis.md).
-
-For ordinary deleted-data recovery, use [deleted data](references/deleted-data.md).
-
-For required user-data export and deletion, use [data rights](references/data-rights.md).
+Do not reopen these as a generic interview queue. For research/interview work, resume from [STATE](../../research/scaffold/STATE.md#resume-here); [the review overview](../../research/scaffold/104-interview-overview.md) records current scope.

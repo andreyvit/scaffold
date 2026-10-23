@@ -1,6 +1,6 @@
 # Which needs should recipes cover?
 
-Proposed scope menu. Choose **first / later / out**. Native mobile is already selected; product profiles can overlap. Start with the shorter [scope interview](79-next-scope.md).
+Historical proposed scope menu, not an approved profile catalog or an instruction to restart the interview. Product profiles can overlap. Current scope is in the [review overview](104-interview-overview.md); resume from [STATE](STATE.md#resume-here). The original menu follows.
 
 | Product | Distinct pressure | First question |
 |---|---|---|

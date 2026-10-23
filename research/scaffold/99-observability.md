@@ -63,13 +63,13 @@ Documentation review only; no installation, benchmark or production sizing test.
 - [Grafana all-in-one development image](https://grafana.com/docs/opentelemetry/docker-lgtm/): explicitly intended for development/demo/testing, not a turnkey production recommendation.
 - [SigNoz architecture](https://signoz.io/docs/architecture/): collector, ClickHouse and application/UI components.
 
-## Next interview question
-How strongly does the preference for owning infrastructure apply to the monitoring backend? This is an ownership-versus-maintenance tradeoff, not a request to approve routine instrumentation details.
+## Historical interview question — no longer pending
+The assistant asked how strongly infrastructure ownership should apply to the monitoring backend. Subsequent discussion produced C76–81 and deferred detailed selection. Do not ask this again as the next question.
 
 ## Grafana Cloud experience · confirmed C76 · 2026-10-23
 BH uses Grafana Cloud. Andrey reports high cost and enough slowness that the team avoids it except as a last resort during investigations; it still serves that last-resort role. He would love a lightweight project covering the observability needs. This is user-reported experience, not an independently measured claim about Grafana Cloud generally.
 
-This changes the prior assistant recommendation: do not assume self-hosting the Grafana stack solves the cost/usability problem. Investigate lightweight alternatives. No replacement, build instruction or universal prohibition on managed telemetry selected. The broad ownership-versus-hosting question remains unresolved; do not repeat it while the user is exploring trace representation.
+This changes the prior assistant recommendation: do not assume self-hosting the Grafana stack solves the cost/usability problem. Investigate lightweight alternatives. No replacement, build instruction or universal prohibition on managed telemetry selected. Ownership-versus-hosting selection remains deferred under C81; do not repeat the historical question or treat self-hosting as chosen.
 
 ## Trace representation and storage — researched explanation, not decisions
 A trace is a set of spans sharing a trace ID. Each span has its own ID, optional parent ID, name, kind, start/end timestamps, attributes, status, events and links. Service/resource and instrumentation-scope metadata accompany spans. Parent IDs reconstruct the hierarchy; links express additional relationships. Spans can arrive separately, out of order, and after a root span completes. Missing spans are possible; receiving the root is not proof of completeness.
