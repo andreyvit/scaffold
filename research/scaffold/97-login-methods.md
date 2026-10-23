@@ -44,3 +44,6 @@ Silent automatic creation (WebAuthn Conditional Create) has additional condition
 Thus email verification followed by automatically offered normal passkey enrollment with system UI satisfies the clarified intent. Silent creation is unnecessary. No provider/device test performed.
 
 Sources: [Google Conditional Create](https://developer.chrome.com/docs/identity/webauthn-conditional-create), [Apple automatic upgrades](https://developer.apple.com/videos/play/wwdc2024/10125/), [Standard passkey registration](https://web.dev/articles/passkey-registration).
+
+## Total lockout · confirmed C83
+Loss of email, all passkeys and all existing sessions is a one-off support situation; no dedicated recovery flow by default. Selected staff have raw-data repair permission, potentially to correct an email, but ownership proof is difficult. A B2B org-admin request is a possible case to review, not automatic authorization. [Details](105-one-off-support-repairs.md).

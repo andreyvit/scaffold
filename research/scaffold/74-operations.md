@@ -59,3 +59,7 @@ C80: prefer direct telemetry files with rotation and indexes; Prometheus/PromQL 
 C81: observability/anomaly details tabled pending Andrey's own experiments. All candidates and file/index alternatives retained; no further recommendations selected.
 
 C82: transactional email uses Postmark or Mailchimp; sending is a job under the existing database/process defaults. [Details](103-transactional-email.md) · [Recipe](../../skills/scaffold/references/email.md).
+
+C83: selected staff may edit raw data for one-off repairs; total lockout is such an exception. No generic editor or blanket identity-override authority selected. [Details](105-one-off-support-repairs.md).
+
+C87: user-data export and deletion are required. Minimum export is a ZIP of JSON files containing all the user's data. [Details](109-data-export-and-deletion.md) · [Recipe](../../skills/scaffold/references/data-rights.md).

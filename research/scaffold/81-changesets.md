@@ -102,3 +102,5 @@ These are remaining design questions, not approved requirements. Ledger snapshot
 
 ## Interview handoff
 Enough direction for an initial design; remaining machinery should be refined through concrete implementation experience. Next topic: B2B identity across companies, in [accounts](73-accounts-decisions.md).
+
+C86: ordinary user-deleted data has a [30-day default recovery window](108-deleted-data-recovery.md). This does not reopen the change/undo model or select a storage representation.

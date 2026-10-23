@@ -1,20 +1,22 @@
 # Scaffold research state
 
 Goal: extract Andrey’s engineering values from original material; use them to choose architecture defaults and useful questions.
-Started: 2026-10-18 (Maldives). Initial source pass and expanded LifeBase/hiring pass complete; coverage limits remain recorded. Core values confirmed; native mobile chosen. Interview has reached C82. Two further value candidates remain labelled, not approved.
+Started: 2026-10-18 (Maldives). Initial source pass and expanded LifeBase/hiring pass complete; coverage limits remain recorded. Core values confirmed; native mobile chosen. Interview has reached C87. Two further value candidates remain labelled, not approved.
 
 ## Resume here
 Canonical repository: `/Users/andreyvit/Developer/andreyvit/scaffold`. Research moved here from `~/env` on 2026-10-23. Continue in this repo.
 
-**Next action: use the requested overview to orient the remaining interview.** C82 settles transactional email: Postmark or Mailchimp, with email sent as a job. User also requested a list of what remains; [overview](104-interview-overview.md) distinguishes settled foundations, useful remaining topic groups, deferred work and synthesis.
+**Next action: consolidate the general server/web defaults; no interview question pending.** C87 makes user-data deletion/export required, with a ZIP of JSON files containing all the user's data as minimum viable export. Preserve this as a product requirement, not a blanket legal interpretation or selection of an export UI/schema.
 
-No question is pending. Remaining cross-cutting topics are account lifecycle/recovery, data lifecycle/portability, APIs/integrations, billing/entitlements where relevant, and any non-obvious expected-job-failure policies. These are candidate topic groups, not mandatory questions or features. Resume one substantive question at a time after the overview; do not ask implementation-obvious choices.
+The [overview](104-interview-overview.md) now separates remaining product/implementation decisions from deferred research. Given the request to power through and avoid obvious/product-only questions, the current general-default pass has enough direction for synthesis. This is the assistant's scope judgment, not confirmation that every architecture detail is settled. Reopen a question only for a concrete unresolved tradeoff.
 
-Observability remains tabled until personal experiments (C81). Modern Apple internals, staff/customer identity separation, change/operation details and custom templating remain separate/deferred as recorded. Native mobile has a later implementation-recipe pass; direction is already settled.
+Keep C86's ordinary deletion recovery window separate from explicit erasure mechanics and retained backups/history. Keep C85 situational: RPC-style JSON for operations; REST may suit CRUD. Jobs' expected-failure behavior depends on the operation; no universal new retry policy inferred.
+
+Observability, modern Apple internals, staff/customer identity separation, detailed operation taxonomy and custom templating remain deferred/separate. No research or trials in those branches without new input.
 
 Interview **one question at a time, max terse**, with all necessary context. After each answer, update this resume block, append state/confirmation records, and update the relevant topic and recipe. Preserve reasons and qualifications. Never count an assistant proposal as user approval. Ask only about real tradeoffs, supported requirements or values; derive obvious engineering consequences and verify feasibility yourself.
 
-Later: continue server/web architecture and operational defaults; auth/permissions and jobs still have open details; observability is deferred pending personal experiments (C81). Modern Apple internals require a separate later research step; staff/customer identity separation and operation taxonomy remain deferred. Server templating is separate strategic work (C68), with an owned component-capable language planned. Do not reopen those now. Older “Next” entries below and the scope/question outlines are historical, not the current cursor.
+Later: consolidate server/web recipes; resolve remaining auth/permissions and jobs details against actual product needs; observability is deferred pending personal experiments (C81). Modern Apple internals require a separate later research step; staff/customer identity separation and operation taxonomy remain deferred. Server templating is separate strategic work (C68), with an owned component-capable language planned. Do not reopen those now. Older “Next” entries below and the scope/question outlines are historical, not the current cursor.
 
 ## Contract
 - Work sequentially: Happy Grid → Bubblehouse → personal repos → Heynote → Zoo v1/skills → LifeBase → Ulysses; revisit earlier sources when new evidence helps.
@@ -604,3 +606,35 @@ Start at “Resume here,” then read only relevant confirmed decisions and topi
 - C82: Postmark or Mailchimp for transactional email; send through a job. Added source/recipe and linked the settled job architecture without inventing retry guarantees or a provider ranking.
 - User requested an overview before the next question. Added 104 with settled foundations, five candidate remaining cross-cutting topic groups, deferred/separate work and recipe consolidation.
 - Remaining groups are an assistant scope assessment, not newly approved features or a demand to answer every implementation detail. No new question pending; observability stays tabled.
+
+## 2026-10-23 — Brisk interview continuation: account lockout
+- User asks to power through; reinforces avoiding obvious implementation choices and universal product decisions.
+- Chose one genuine policy boundary: support authority when email, passkeys and existing sessions are all unavailable. Existing ordinary login/recovery protections remain settled.
+- Saved exact pending question. No new confirmed policy or implementation.
+
+## 2026-10-23 — One-off total lockout and raw-data repair permission
+- C83: no dedicated flow for total lockout; rare one-off case. Selected staff should have raw-data editing permission for exceptional fixes, including email correction.
+- Preserved skepticism about ownership proof and tentative B2B org-admin scenario; no automatic proof or blanket company-admin shared-login override inferred.
+- Added source and updated login/permissions recipes, identity/accounts/operations, confirmations and overview. No editor UI or exact repair mechanism selected.
+- Next: payment-provider default for paid web products; leave pricing/features and native app-store billing outside this question.
+
+## 2026-10-23 — Stripe selected
+- C84: Stripe is the default for paid web products. Added small source/recipe, entrypoint link and confirmation; updated overview and index.
+- No pricing, billing model, checkout mode or native app-store policy inferred. No provider research/setup needed for the stated preference.
+- Next: API style for own web/native clients; public API compatibility remains separate.
+
+## 2026-10-23 — RPC-style JSON APIs confirmed
+- C85: own web/native client APIs use RPC-style JSON, not REST. Added source/recipe and updated architecture, skill entrypoint, confirmations, index and overview.
+- No framework, exact protocol/envelope, generated clients or public API compatibility commitment inferred. SSR/forms/Turbo remain the web default.
+- Next: default recovery window for ordinary user-deleted data, distinct from already-selected undo architecture, analytics retention and backups.
+
+## 2026-10-23 — API qualification and deleted-data recovery
+- C85 clarified: RPC/JSON preference is situational; CRUD APIs may use REST. Most of the user's APIs are not CRUD. Updated current source/recipe, confirmation and architecture rather than retaining a blanket ban.
+- C86: ordinary deleted data recoverable for 30 days by default. Added source/recipe and updated overview/index/change notes. No storage mechanism, trash UI, purge schedule or erasure deadline inferred.
+- Next: default user data-export expectation, with foundations and product UI kept separate.
+
+## 2026-10-23 — Required export/deletion; general-default pass ready for synthesis
+- C87: deletion and export are required; GDPR is the user's rationale. Minimum export is a ZIP of JSON files with all user data.
+- Added source/recipe and links; preserved actual ownership boundaries and ordinary 30-day recovery scope without inventing erasure deadlines or import support.
+- Reconciled the stale async-work matrix row against confirmed job defaults. Updated overview to treat remaining generic items as product/implementation work unless a concrete tradeoff arises.
+- No new interview question pending. General server/web pass is ready for consolidation; explicitly deferred branches stay deferred. This scope assessment is not a new user-approved architecture decision.

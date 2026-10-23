@@ -42,3 +42,11 @@ For uploaded-file storage and delivery, use [uploads](references/uploads.md).
 For metrics, analytics, tracing and logging from project start, use [observability](references/observability.md).
 
 For transactional email delivery, use [email](references/email.md).
+
+For payments in paid web products, use [payments](references/payments.md).
+
+For data APIs used by the app's own clients, use [APIs](references/apis.md).
+
+For ordinary deleted-data recovery, use [deleted data](references/deleted-data.md).
+
+For required user-data export and deletion, use [data rights](references/data-rights.md).

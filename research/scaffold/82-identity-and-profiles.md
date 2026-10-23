@@ -42,3 +42,5 @@ Sharing, conversion and exposed workspace UI remain separate product choices; no
 
 ## Signup timing
 Convenience favors use before login, but the business funnel determines the choice; measure and test the assumption. [Confirmed rule](83-business-and-onboarding.md).
+
+C83: total lockout is handled as a [one-off staff repair](105-one-off-support-repairs.md), not a dedicated recovery flow. This leaves ordinary first-class email-change flows and the restriction on company-admin edits to shared login identity intact.

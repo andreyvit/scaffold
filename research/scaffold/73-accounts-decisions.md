@@ -12,7 +12,7 @@ Identity/profile default confirmed; other choices remain exploration. [Identity 
 | Login | **Email code initially when email is available; passkeys offered from the start (C71)**; other methods product-specific | Enrollment, recovery and stronger company requirements |
 | Enterprise identity | Optional federation; enforced SSO; provisioning/deprovisioning | Who is authoritative, and how fast must removal take effect? |
 | Extra assurance | Normal login; step-up; stronger admin policy | Which actions merit renewed proof? What assurance does a passkey actually provide? |
-| Recovery | Spare credentials; provider recovery; recovery codes; assisted recovery | What happens after losing every device/provider? Who may override? |
+| Recovery | **Total lockout is a one-off; selected staff may repair raw data (C83)** | Case-specific ownership proof; no standard total-lockout flow or automatic admin override |
 | Customer-data access | **Superstaff allowed; audit meaningful access by any user (C62)** | Project-specific exceptions, audit visibility and retention |
 | Authorization | **Permissions, roles and default roles from the start (C63)**; offer role-customization UI as an optional feature | Is customization UI authorized for this product? Which permissions and default roles fit it? |
 | Session | Server session; scoped API token; host-bound session | Need immediate revocation, third-party clients or distributed verification? |

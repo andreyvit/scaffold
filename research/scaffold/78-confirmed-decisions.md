@@ -240,3 +240,18 @@ Save all observability, anomaly-detection and file/index options and table the t
 
 ## 2026-10-23 · C82 · Postmark or Mailchimp; email is a job
 Use Postmark or Mailchimp for transactional email. Sending an email should be a job. No ranking between providers or new retry/delivery guarantee selected. [Details](103-transactional-email.md) · [Recipe](../../skills/scaffold/references/email.md).
+
+## 2026-10-23 · C83 · Total lockout is a one-off; selected staff may repair raw data
+Treat loss of email, passkeys and all sessions as an exceptional support case, not a standard recovery feature. Give selected staff raw-data editing permission for one-off repairs such as correcting an email. Ownership proof remains difficult; an org-admin request in B2B is a possible case, not automatic authorization. [Details](105-one-off-support-repairs.md).
+
+## 2026-10-23 · C84 · Stripe for paid web products
+Default to Stripe. Pricing, billing model, entitlements and integration mode remain product/implementation choices; native app-store billing was outside the question. [Details](106-payments.md) · [Recipe](../../skills/scaffold/references/payments.md).
+
+## 2026-10-23 · C85 · RPC-style JSON APIs for our own clients
+Prefer RPC-style JSON for operation-oriented APIs used by the application's own web/native clients. Clarified as situational: CRUD-focused APIs may use REST; most APIs Andrey builds are not CRUD. No framework, generated-client approach, exact envelope or public API compatibility policy selected. [Details](107-api-style.md) · [Recipe](../../skills/scaffold/references/apis.md).
+
+## 2026-10-23 · C86 · Thirty-day deleted-data recovery default
+Keep ordinary user-deleted data recoverable for 30 days by default. No universal storage mechanism, UI or erasure policy selected. [Details](108-deleted-data-recovery.md) · [Recipe](../../skills/scaffold/references/deleted-data.md).
+
+## 2026-10-23 · C87 · Required deletion/export; ZIP of JSON as minimum export
+User-data deletion and export are required capabilities; Andrey cites GDPR as the reason. Minimum viable export is a ZIP containing JSON files with all the user's data. Exact UI, schema, ownership boundaries and erasure mechanics remain implementation/product-specific. [Details](109-data-export-and-deletion.md) · [Recipe](../../skills/scaffold/references/data-rights.md).
