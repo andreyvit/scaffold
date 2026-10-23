@@ -1,0 +1,164 @@
+repository	history family	pre-June-2025 commits	Andrey commits	Andrey share	coverage	evidence
+/Users/andreyvit/Developer/blocks	blocks	5	5	1.0	rationale read	60-other-code.md
+/Users/andreyvit/Developer/claude-code	claude-code	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/zed/zed	zed/zed	26489	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/experiments/yakGPT	experiments/yakGPT	1	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/experiments/SmokeOnExperiments	experiments/SmokeOnExperiments	1	1	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/experiments/XcodeTwelveExperiment	experiments/XcodeTwelveExperiment	1	1	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/experiments/Macest	experiments/Macest	1	1	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/experiments/localai/Qwen Image Lab/ComfyUI	experiments/localai/Qwen Image Lab/ComfyUI	3301	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/experiments/macvdmtool	experiments/macvdmtool	6	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/experiments/InAppPurchasesTest	experiments/InAppPurchasesTest	1	1	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/experiments/chatbot-ui	experiments/chatbot-ui	290	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/experiments/Gamelorer	experiments/Gamelorer	1	1	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/experiments/TryATS	experiments/TryATS	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/experiments/TableExample	experiments/TableExample	1	1	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/experiments/MobileGamelorer	experiments/MobileGamelorer	1	1	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/livereload/api.livereload.com	livereload/api.livereload.com	29	29	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/livereload/newreload	livereload/newreload	2	2	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/livereload/old/LiveReload/Compilers	livereload/compilers	235	234	0.996	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/livereload/old/Shared/libs/fsmonitor	livereload/old/Shared/libs/fsmonitor	21	21	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/livereload/old	livereload/main-history	2288	1933	0.845	shared history; counts repaired read-only	36-livereload-and-writing.md
+/Users/andreyvit/Developer/livereload/extensions	livereload/extensions	83	73	0.88	README release workflow read	36-livereload-and-writing.md
+/Users/andreyvit/Developer/livereload/examples	livereload/examples	14	14	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/livereload/Uno	livereload/Uno	1	1	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/livereload/site	livereload/site	96	96	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/livereload/3/ExpressiveFoundation	livereload/3/ExpressiveFoundation	17	17	1.0	small-library README/tree screened	36-livereload-and-writing.md
+/Users/andreyvit/Developer/livereload/3/ATPathSpec	livereload/3/ATPathSpec	44	44	1.0	small-library README/tree screened	36-livereload-and-writing.md
+/Users/andreyvit/Developer/livereload/3/plugins	livereload/compilers	234	233	0.996	small-library README/tree screened	36-livereload-and-writing.md
+/Users/andreyvit/Developer/livereload/3/ExpressiveCollections	livereload/3/ExpressiveCollections	7	7	1.0	small-library README/tree screened	36-livereload-and-writing.md
+/Users/andreyvit/Developer/livereload/3/ExpressiveCocoa	livereload/3/ExpressiveCocoa	5	5	1.0	small-library README/tree screened	36-livereload-and-writing.md
+/Users/andreyvit/Developer/livereload/3/FSMonitoringKit	livereload/3/FSMonitoringKit	2	2	1.0	small-library README/tree screened	36-livereload-and-writing.md
+/Users/andreyvit/Developer/livereload/3/ATVersionKit	livereload/3/ATVersionKit	5	5	1.0	small-library README/tree screened	36-livereload-and-writing.md
+/Users/andreyvit/Developer/livereload/3/ExpressiveCasting	livereload/3/ExpressiveCasting	30	30	1.0	small-library README/tree screened	36-livereload-and-writing.md
+/Users/andreyvit/Developer/livereload/3	livereload/main-history	2531	2168	0.857	architecture rationale and test code sampled	36-livereload-and-writing.md
+/Users/andreyvit/Developer/livereload/2/LiveReload/Compilers	livereload/compilers	235	234	0.996	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/livereload/2	livereload/main-history	2537	2174	0.857	shared history; counts repaired read-only	36-livereload-and-writing.md
+/Users/andreyvit/Developer/wonderfulapp/blobsyncserver	wonderfulapp/blobsyncserver	19	9	0.474	minority own commits; no whole-project attribution	03-coverage.md
+/Users/andreyvit/Developer/wonderfulapp/thewonderfulapp-www	wonderfulapp/thewonderfulapp-www	9	3	0.333	minority own commits; no whole-project attribution	03-coverage.md
+/Users/andreyvit/Developer/wonderfulapp/thewonderfulapp-ios	wonderfulapp/thewonderfulapp-ios	63	63	1.0	selected state/sync code and commits	34-wonderful.md
+/Users/andreyvit/Developer/contribs/screenshot	contribs/screenshot	30	2	0.067	minority own commits; no whole-project attribution	03-coverage.md
+/Users/andreyvit/Developer/lifehack/virtual-demir	lifehack/virtual-demir	21	21	1.0	README workflow read	63-small-tools.md
+/Users/andreyvit/Developer/samplecode	samplecode	4	4	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/examples/CodeEdit	examples/CodeEdit	1346	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/book/examples	book/examples	4	4	1.0	small Swift preferences examples screened	60-other-code.md
+/Users/andreyvit/Developer/sarekon/sarekon-consumer-android	sarekon/sarekon-consumer-android	343	78	0.227	selected own fixes; majority other authors	35-sarekon.md
+/Users/andreyvit/Developer/sarekon/sarekon-consumer-ios	sarekon/sarekon-consumer-ios	283	202	0.714	selected own state/cache/identity code	35-sarekon.md
+/Users/andreyvit/Developer/sarekon/google-maps-services-java	sarekon/google-maps-services-java	899	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/sarekon/sarekon-consumer-native/ios	sarekon/sarekon-consumer-ios	283	202	0.714	duplicate native app history; sampled in sibling checkout	35-sarekon.md
+/Users/andreyvit/Developer/sarekon/sarekon-consumer-native/android	sarekon/sarekon-consumer-android	343	78	0.227	duplicate native app history; sampled in sibling checkout	35-sarekon.md
+/Users/andreyvit/Developer/sarekon/sarekon-consumer-native	sarekon/sarekon-consumer-native	3	2	0.667	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/iconpong	iconpong	18	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/spellbook	spellbook	2	2	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/pub/SundaySchool-conf	pub/SundaySchool-conf	4	4	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/pub/tarantsov	pub/tarantsov	333	67	0.201	historical essays and AI-era authorship candidates	36-livereload-and-writing.md;43-zoo.md
+/Users/andreyvit/Developer/pub/SundaySchool-site	pub/SundaySchool-site	10	10	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/pub/abdirectory	pub/abdirectory	2	2	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/pub/posidelki	pub/posidelki	43	41	0.953	episode notes screened; no attributable transcript	62-more-writing.md
+/Users/andreyvit/Developer/pub/SundaySchool	pub/SundaySchool	8	8	1.0	historical teaching/business writing read	62-more-writing.md
+/Users/andreyvit/Developer/pub/growjournalism	pub/growjournalism	2	2	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/mvpalliance	mvpalliance	2	2	1.0	tracked and untracked original-looking drafts read	62-more-writing.md
+/Users/andreyvit/Developer/hammerspoon/hammerspoon_asm	hammerspoon/hammerspoon_asm	769	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/prairie/claude-code-setup	prairie/claude-code-setup	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/prairie/woocommerce	prairie/woocommerce	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/prairie/infra	prairie/infra	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/prairie/magento	prairie/magento	52	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/prairie/back3	prairie/backend	6468	4395	0.679	duplicate/shared backend history; sampled at backend	21-bubblehouse.md
+/Users/andreyvit/Developer/prairie/back4	prairie/backend	6468	4395	0.679	duplicate/shared backend history; sampled at backend	21-bubblehouse.md
+/Users/andreyvit/Developer/prairie/back10	prairie/backend	6468	4395	0.679	duplicate/shared backend history; sampled at backend	21-bubblehouse.md
+/Users/andreyvit/Developer/prairie/back5	prairie/backend	6468	4395	0.679	duplicate/shared backend history; sampled at backend	21-bubblehouse.md
+/Users/andreyvit/Developer/prairie/wiki.old	prairie/wiki.old	17	15	0.882	selected historical writing screened; no generalization	03-coverage.md
+/Users/andreyvit/Developer/prairie/back2	prairie/backend	6469	4395	0.679	duplicate/shared backend history; sampled at backend	21-bubblehouse.md
+/Users/andreyvit/Developer/prairie/sqlstruct	prairie/sqlstruct	20	20	1.0	historical library rationale read	31-small-libraries.md
+/Users/andreyvit/Developer/prairie/engineering-site	prairie/engineering-site	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/prairie/web	prairie/web	1356	98	0.072	selected own commits only; majority other authors	60-other-code.md
+/Users/andreyvit/Developer/prairie/legacy	prairie/legacy	3725	2131	0.572	selected own early commits and code	21-bubblehouse.md
+/Users/andreyvit/Developer/prairie/test-tools	prairie/test-tools	64	12	0.188	minority own commits; no whole-project attribution	03-coverage.md
+/Users/andreyvit/Developer/prairie/wiki	prairie/wiki	137	83	0.606	selected historical writing screened; mixed authorship	03-coverage.md
+/Users/andreyvit/Developer/prairie/backend/.claude/worktrees/lookback-points-calculation-f63003	prairie/backend	6469	4395	0.679	duplicate/shared backend history; sampled at backend	21-bubblehouse.md
+/Users/andreyvit/Developer/prairie/backend	prairie/backend	6469	4395	0.679	historical docs and selected own code/commits	21-bubblehouse.md
+/Users/andreyvit/Developer/prairie/sqlite	prairie/sqlite	30371	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/prairie/apirepo	prairie/apirepo	1	1	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/prairie/ERC721A	prairie/ERC721A	261	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/prairie/blockchain	prairie/blockchain	108	44	0.407	minority own commits; no whole-project attribution	03-coverage.md
+/Users/andreyvit/Developer/prairie/prairie-landing	prairie/prairie-landing	127	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/prairie/echarts-examples	prairie/echarts-examples	76	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/prairie/linearsummarybot	prairie/linearsummarybot	25	25	1.0	README goals read	63-small-tools.md
+/Users/andreyvit/Developer/prairie/watchdog	prairie/watchdog	4	4	1.0	README rationale read	60-other-code.md
+/Users/andreyvit/Developer/prairie/clone	prairie/backend	5478	3771	0.688	duplicate/shared backend history; sampled at backend	21-bubblehouse.md
+/Users/andreyvit/Developer/prairie/back9	prairie/backend	6468	4395	0.679	duplicate/shared backend history; sampled at backend	21-bubblehouse.md
+/Users/andreyvit/Developer/prairie/back7	prairie/backend	6468	4395	0.679	duplicate/shared backend history; sampled at backend	21-bubblehouse.md
+/Users/andreyvit/Developer/prairie/bbolt	prairie/bbolt	1124	1	0.001	minority own commits; no whole-project attribution	03-coverage.md
+/Users/andreyvit/Developer/prairie/android	prairie/android	824	0	0.0	excluded: no eligible Andrey commits	22-bubblehouse-mobile.md
+/Users/andreyvit/Developer/prairie/back6	prairie/backend	6468	4395	0.679	duplicate/shared backend history; sampled at backend	21-bubblehouse.md
+/Users/andreyvit/Developer/prairie/back8	prairie/backend	6468	4395	0.679	duplicate/shared backend history; sampled at backend	21-bubblehouse.md
+/Users/andreyvit/Developer/prairie/promos	prairie/promos	8	8	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/prairie/bubbleos-shopify-experiments	prairie/bubbleos-shopify-experiments	5	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/prairie/pdfexp/pdfpoc	prairie/pdfexp/pdfpoc	15	15	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/prairie/pdfexp/Golang-PDF-to-Image-Converter	prairie/pdfexp/Golang-PDF-to-Image-Converter	20	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/prairie/pdfexp/js-genai	prairie/pdfexp/js-genai	538	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/prairie/ipfs-upload-client	prairie/ipfs-upload-client	14	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/prairie/bolt2	prairie/bolt2	1123	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/prairie/themes/tractor-theme	prairie/themes/tractor-theme	3	3	1.0	inventory/tree/README screening only; no value attributed	03-coverage.md
+/Users/andreyvit/Developer/prairie/product-reviews-sample-app	prairie/product-reviews-sample-app	64	0	0.0	excluded: no eligible Andrey commits	03-coverage.md
+/Users/andreyvit/Developer/andreyvit/journal	andreyvit/journal	24	24	1.0	README and journal.go sampled; timestamp/recovery rationale; see 60-other-code.md	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/jsondiff	andreyvit/jsondiff	4	4	1.0	read all; narrow derivative; upstream code not attributed to Andrey	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/signedstrings	andreyvit/signedstrings	6	6	1.0	read all; narrow signing wrapper and rotation; no auth-system prescription	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/happigrid2	andreyvit/happigrid	0	0		duplicate project; original-message review shared	10-happy-grid.md
+/Users/andreyvit/Developer/andreyvit/runningvariance	andreyvit/runningvariance	6	1	0.167	README screened; mostly upstream authorship; no Andrey value inferred	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/ourlove/protoappserver	andreyvit/ourlove/protoappserver	2	2	1.0	model/store sampled; unfinished prototype; see 63-small-tools.md	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/langai	andreyvit/langai	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/andreyvit/jsonfix	andreyvit/jsonfix	10	10	1.0	read all; explicit rationale, scope and coverage exception	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/httpform	andreyvit/httpform	20	20	1.0	implementation sampled; reflection is not universally banned; see 60-other-code.md	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/mvp	andreyvit/mvp	155	145	0.935	context/auth implementation sampled; see 60-other-code.md	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/yesterdaytechnewsbot	andreyvit/yesterdaytechnewsbot	13	13	1.0	README read; simple utility; no value inference yet	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/ReferenceURLsFormatter	andreyvit/ReferenceURLsFormatter	3	3	1.0	small implementation sampled; dependencies in bounded utility; see 60-other-code.md	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/schedule-creator	andreyvit/schedule-creator	6	6	1.0	time/progress code sampled; bounded tool; no architecture inference	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/bureaumcp	andreyvit/bureaumcp	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/andreyvit/sqlstruct	andreyvit/sqlstruct	13	13	1.0	read all; bounded generator, not whole-app framework	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/contextual	andreyvit/contextual	1	1	1.0	README-only historical stub; no implementation	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/talkingduck	andreyvit/talkingduck	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/andreyvit/tarantsov-chat	andreyvit/tarantsov-chat	1	1	1.0	README-only historical stub; no implementation	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/json-diff	andreyvit/json-diff	60	39	0.65	README screened; mixed authorship; narrow library; no new value inference	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/rerun	andreyvit/rerun	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/andreyvit/MacAccelerator	andreyvit/Maccel	18	17	0.944	shared history; selected own commits	36-livereload-and-writing.md
+/Users/andreyvit/Developer/andreyvit/safedepositmgr	andreyvit/safedepositmgr	2	2	1.0	tree/README screened; prototype; private data files excluded	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/Maccel	andreyvit/Maccel	24	23	0.958	selected own commits	36-livereload-and-writing.md
+/Users/andreyvit/Developer/andreyvit/sqlexpr	andreyvit/sqlexpr	10	10	1.0	read rationale/examples; raw SQL, plain types, global dialect rationale	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/server-h2	andreyvit/server-h2	15	15	1.0	tree/README screened; deployment config; no new value inference	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/aoc	andreyvit/aoc	3	3	1.0	README/tree screened; exercises; no whole-app inference	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/buddyd	andreyvit/buddyd	76	76	1.0	auth/change implementation sampled; empty SSO test noted; see 60-other-code.md	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/audiencebot	andreyvit/audiencebot	1	1	1.0	README-only historical stub; no implementation	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/DeepWorkTimer	andreyvit/DeepWorkTimer	72	72	1.0	state/effects/persistence sampled; see 33-deep-work-timer.md	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/assert	andreyvit/assert	11	11	1.0	read rationale/API; simple typed assertions and custom extensions	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/multierr	andreyvit/multierr	2	2	1.0	read all; hide incidental type, preserve cleanup failures	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/aidev	andreyvit/aidev	40	40	1.0	EXCLUDED: explicitly AI-written README and code	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/download-papertrail-archives	andreyvit/download-papertrail-archives	7	7	1.0	README read; bounded utility; no broad inference	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/dashing	andreyvit/dashing	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/andreyvit/happigrid	andreyvit/happigrid	0	0		original user messages; selected docs/history	10-happy-grid.md
+/Users/andreyvit/Developer/andreyvit/edb	andreyvit/edb	103	102	0.99	read all; single-server rationale and exceptions; historical Badger plan not current	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/binaryio	andreyvit/binaryio	4	4	1.0	read all; explicit serialization/version example, no strong value claim	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/zoo	andreyvit/zoo	0	0		v1/personas/docs and writing compared; AI text excluded	43-zoo.md
+/Users/andreyvit/Developer/andreyvit/httpserver	andreyvit/httpserver	1	1	1.0	implementation sampled; safe bind and shutdown; see 60-other-code.md	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/httpsimplified	andreyvit/httpsimplified	25	25	1.0	read all; stdlib composition, explicit client after timeout lesson	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/ynabexpenseform	andreyvit/ynabexpenseform	9	9	1.0	cache/amount/render test sampled; no broad prescription; see 63-small-tools.md	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/envloader	andreyvit/envloader	3	3	1.0	read all; WIP; historical config approach differs from current scaffold	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/httpcall	andreyvit/httpcall	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/andreyvit/plainsecrets	andreyvit/plainsecrets	9	9	1.0	read purpose/config; reduce team/server coordination; crypto primitive dependency	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/sealer	andreyvit/sealer	7	7	1.0	read purpose/API; limited streaming format using established dependencies	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/claude-code-plugins	andreyvit/claude-code-plugins	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/andreyvit/rockstar	andreyvit/rockstar	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/andreyvit/tinyjson	andreyvit/tinyjson	4	4	1.0	read all; bounded TinyGo tradeoff; valid input precondition	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/tagparser	andreyvit/tagparser	9	9	1.0	read rationale/API; optional errors and low-allocation callback	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/naml	andreyvit/naml	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/andreyvit/espboard	andreyvit/espboard	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/andreyvit/smsactions	andreyvit/smsactions	1	1	1.0	historical tree has README/license/gitignore only; no implementation	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/ticketing	andreyvit/ticketing	1	1	1.0	historical tree has README/license only; no implementation	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/phonenumbers	andreyvit/phonenumbers	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/andreyvit/hash-benchmark-go	andreyvit/hash-benchmark-go	7	7	1.0	read all; cross-CPU results and throttle control	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/smscoderemoteaccess	andreyvit/smscoderemoteaccess	4	4	1.0	README read; historical personal tool; not security default	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/christmaslights	andreyvit/christmaslights	51	51	1.0	README and simulator/C interfaces sampled; see 63-small-tools.md	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/openai	andreyvit/openai	19	19	1.0	read rationale/API; small inspectable SDK; no current API recommendation	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/minicomponents	andreyvit/minicomponents	17	17	1.0	implementation sampled; template composition/errors; see 60-other-code.md	32-library-sources.tsv
+/Users/andreyvit/Developer/andreyvit/lifebase	andreyvit/lifebase	0	0		no pre-cutoff history; AI-era code not used as value evidence	03-coverage.md
+/Users/andreyvit/Developer/andreyvit/router	andreyvit/router	3	3	1.0	README/doc/builder sampled; intended middleware API unfinished; see 60-other-code.md	32-library-sources.tsv

@@ -1,0 +1,13 @@
+repository	revision	file	line_authors
+/Users/andreyvit/Developer/andreyvit/mvp	49515fcdbd1ac01468fc3d05a47c8c31c6d7fbc2	context.go	{'Andrey Tarantsov': 44}
+/Users/andreyvit/Developer/andreyvit/mvp	49515fcdbd1ac01468fc3d05a47c8c31c6d7fbc2	auth.go	{'Andrey Tarantsov': 220}
+/Users/andreyvit/Developer/andreyvit/mvp	49515fcdbd1ac01468fc3d05a47c8c31c6d7fbc2	gracefulshutdown.go	{'Andrey Tarantsov': 37}
+/Users/andreyvit/Developer/andreyvit/buddyd	508be470bde6fd15e55d37538561dd9432599fa3	auth.go	{'Andrey Tarantsov': 112}
+/Users/andreyvit/Developer/andreyvit/buddyd	508be470bde6fd15e55d37538561dd9432599fa3	model/permissions.go	{'Andrey Tarantsov': 56}
+/Users/andreyvit/Developer/andreyvit/buddyd	508be470bde6fd15e55d37538561dd9432599fa3	changes/change.go	{'Andrey Tarantsov': 15}
+/Users/andreyvit/Developer/andreyvit/httpform	25c63cb4041aae2d4ee82eca65d7be3c012a2e1b	httpform.go	{'Andrey Tarantsov': 342}
+/Users/andreyvit/Developer/andreyvit/httpserver	f3fda2b554b5555573ce9aabd01b94ddf70ec8e2	httpserver.go	{'Andrey Tarantsov': 195}
+/Users/andreyvit/Developer/andreyvit/minicomponents	946a6c3bbb0389ec314e393b5b3cf65864a69e20	components.go	{'Andrey Tarantsov': 512}
+/Users/andreyvit/Developer/andreyvit/journal	51583f57f77775ec69b22e9271d6f48d87c8a239	journal.go	{'Andrey Tarantsov': 304}
+/Users/andreyvit/Developer/andreyvit/journal	51583f57f77775ec69b22e9271d6f48d87c8a239	fileformat.go	{'Andrey Tarantsov': 72}
+/Users/andreyvit/Developer/andreyvit/ynabexpenseform	bafb244bc6caac52d2627c59118dff2623392f25	web_test.go	{'Andrey Tarantsov': 51}

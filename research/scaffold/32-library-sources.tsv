@@ -1,0 +1,45 @@
+repo	revision	README authors	coverage
+/Users/andreyvit/Developer/andreyvit/journal	51583f57f77775ec69b22e9271d6f48d87c8a239	{'Andrey Tarantsov': 2}	README and journal.go sampled; timestamp/recovery rationale; see 60-other-code.md
+/Users/andreyvit/Developer/andreyvit/jsondiff	bb9fc1bb5aca33551a9616493bf6c843e9427235	{'Andrey Tarantsov': 41}	read all; narrow derivative; upstream code not attributed to Andrey
+/Users/andreyvit/Developer/andreyvit/signedstrings	8d517ff215f4351f5fe2351570e1bfeb5ee822c4	{'Andrey Tarantsov': 103}	read all; narrow signing wrapper and rotation; no auth-system prescription
+/Users/andreyvit/Developer/andreyvit/runningvariance	02f2a5420418f6a6f8c7955733886adc1c2b84d3	{'Andrey Tarantsov': 22, 'Carbocation': 3}	README screened; mostly upstream authorship; no Andrey value inferred
+/Users/andreyvit/Developer/andreyvit/ourlove/protoappserver	b8a81243becbe25d7820328e92937a3584515a2f	{'Andrey Tarantsov': 3}	model/store sampled; unfinished prototype; see 63-small-tools.md
+/Users/andreyvit/Developer/andreyvit/jsonfix	50cc9639b672b738fa0b11572917c24faddbc127	{'Andrey Tarantsov': 80}	read all; explicit rationale, scope and coverage exception
+/Users/andreyvit/Developer/andreyvit/httpform	25c63cb4041aae2d4ee82eca65d7be3c012a2e1b	{'Andrey Tarantsov': 2}	implementation sampled; reflection is not universally banned; see 60-other-code.md
+/Users/andreyvit/Developer/andreyvit/mvp	49515fcdbd1ac01468fc3d05a47c8c31c6d7fbc2	{'Andrey Tarantsov': 2}	context/auth implementation sampled; see 60-other-code.md
+/Users/andreyvit/Developer/andreyvit/yesterdaytechnewsbot	309059cd59f9bccbeacbce32ead23b845c627edd	{'Andrey Tarantsov': 32}	README read; simple utility; no value inference yet
+/Users/andreyvit/Developer/andreyvit/ReferenceURLsFormatter	b791bc42a88d2589bd272174026f0d7d021ec260	{'Andrey Tarantsov': 1}	small implementation sampled; dependencies in bounded utility; see 60-other-code.md
+/Users/andreyvit/Developer/andreyvit/schedule-creator	8ea0addb08447006d1bab29792ac7ecab22c1efa	{'Andrey Tarantsov': 1}	time/progress code sampled; bounded tool; no architecture inference
+/Users/andreyvit/Developer/andreyvit/sqlstruct	8c42b94a0dc8685e3afa23668b038e82dac7661b	{'Andrey Tarantsov': 83}	read all; bounded generator, not whole-app framework
+/Users/andreyvit/Developer/andreyvit/contextual	86a611c94b14c1da96b3497a74983d74b6bbce0a	{'Andrey Tarantsov': 2}	README-only historical stub; no implementation
+/Users/andreyvit/Developer/andreyvit/tarantsov-chat	f3032793f06a75fa16e22b4ae98be09e145559f2	{'Andrey Tarantsov': 1}	README-only historical stub; no implementation
+/Users/andreyvit/Developer/andreyvit/json-diff	39594d481c3c9233d9dccd13f574cb9fd088fced	{'Andrey Tarantsov': 106, 'Venkateswara Venkatraman Prasanna': 1, 'Gavriel Fleischer': 3, 'worldsayshi': 24}	README screened; mixed authorship; narrow library; no new value inference
+/Users/andreyvit/Developer/andreyvit/safedepositmgr	0bae60f6c241df5753a5189e9d0bcf7b077db3c5	{'Andrey Tarantsov': 1}	tree/README screened; prototype; private data files excluded
+/Users/andreyvit/Developer/andreyvit/sqlexpr	23f36de2474cee44412fe6a8d55bfd3450317683	{'Andrey Tarantsov': 161}	read rationale/examples; raw SQL, plain types, global dialect rationale
+/Users/andreyvit/Developer/andreyvit/server-h2	776cd07905e7480b7fb55bb53d1281e3017401a2	{'Andrey Tarantsov': 3}	tree/README screened; deployment config; no new value inference
+/Users/andreyvit/Developer/andreyvit/aoc	98c7e43f875f5bb6f40eebcec6111941b8292181	{'Andrey Tarantsov': 1}	README/tree screened; exercises; no whole-app inference
+/Users/andreyvit/Developer/andreyvit/buddyd	508be470bde6fd15e55d37538561dd9432599fa3	{'Andrey Tarantsov': 20}	auth/change implementation sampled; empty SSO test noted; see 60-other-code.md
+/Users/andreyvit/Developer/andreyvit/audiencebot	073f3b5751cfee73c8b26dfb6ee1b85ba79dd62f	{'Andrey Tarantsov': 1}	README-only historical stub; no implementation
+/Users/andreyvit/Developer/andreyvit/DeepWorkTimer	d3bc1a45b0da025f3c8bc49d489e1b48d2227317	{'Andrey Tarantsov': 35}	state/effects/persistence sampled; see 33-deep-work-timer.md
+/Users/andreyvit/Developer/andreyvit/assert	22de59dddb691423ccbf5555229aeb35ed11e9c3	{'Andrey Tarantsov': 187}	read rationale/API; simple typed assertions and custom extensions
+/Users/andreyvit/Developer/andreyvit/multierr	448a89df93c541391db8544d49683bc5c4f1bc68	{'Andrey Tarantsov': 46}	read all; hide incidental type, preserve cleanup failures
+/Users/andreyvit/Developer/andreyvit/aidev	956456dd447562b6a755b6a21a2ff039d01a9359	{'Andrey Tarantsov': 175}	EXCLUDED: explicitly AI-written README and code
+/Users/andreyvit/Developer/andreyvit/download-papertrail-archives	ebc866550f8d3d60be3870ce6ea9405562ea859a	{'Andrey Tarantsov': 39}	README read; bounded utility; no broad inference
+/Users/andreyvit/Developer/andreyvit/edb	0604a94c5850c2721b3c7b67d2f713b8f271ff95	{'Andrey Tarantsov': 225}	read all; single-server rationale and exceptions; historical Badger plan not current
+/Users/andreyvit/Developer/andreyvit/binaryio	f14c8e249685f63955d091882608cf208f34137c	{'Andrey Tarantsov': 71}	read all; explicit serialization/version example, no strong value claim
+/Users/andreyvit/Developer/andreyvit/httpserver	f3fda2b554b5555573ce9aabd01b94ddf70ec8e2	{'Andrey Tarantsov': 5}	implementation sampled; safe bind and shutdown; see 60-other-code.md
+/Users/andreyvit/Developer/andreyvit/httpsimplified	79d946eaed1b00c86f08c5eca8dc9ab386d626ef	{'Andrey Tarantsov': 78}	read all; stdlib composition, explicit client after timeout lesson
+/Users/andreyvit/Developer/andreyvit/ynabexpenseform	bafb244bc6caac52d2627c59118dff2623392f25	{'Andrey Tarantsov': 2}	cache/amount/render test sampled; no broad prescription; see 63-small-tools.md
+/Users/andreyvit/Developer/andreyvit/envloader	487a0f93d1ef0e398fd7fca8448c98716c7ebc5e	{'Andrey Tarantsov': 40}	read all; WIP; historical config approach differs from current scaffold
+/Users/andreyvit/Developer/andreyvit/plainsecrets	76eaa3703a390d8510c96831f96e16f4cf2add14	{'Andrey Tarantsov': 190}	read purpose/config; reduce team/server coordination; crypto primitive dependency
+/Users/andreyvit/Developer/andreyvit/sealer	9af18a9cdd9c97ecd16f10280da1f3aa6517aa9d	{'Andrey Tarantsov': 138}	read purpose/API; limited streaming format using established dependencies
+/Users/andreyvit/Developer/andreyvit/tinyjson	bf1fd13cc73ab0be3709aa2314679ebe8c82b776	{'Andrey Tarantsov': 101}	read all; bounded TinyGo tradeoff; valid input precondition
+/Users/andreyvit/Developer/andreyvit/tagparser	f7c60488bd41adfd15df77ea0feec4a9d4e4e6fa	{'Andrey Tarantsov': 129}	read rationale/API; optional errors and low-allocation callback
+/Users/andreyvit/Developer/andreyvit/smsactions	df2d24193a21b4eeb583af84098cbc99c33003df	{'Andrey Tarantsov': 2}	historical tree has README/license/gitignore only; no implementation
+/Users/andreyvit/Developer/andreyvit/ticketing	02c5c194c28736cad2c1856ab5533f313feed75b	{'Andrey Tarantsov': 2}	historical tree has README/license only; no implementation
+/Users/andreyvit/Developer/andreyvit/hash-benchmark-go	9fb62140146ca390541d010342129db6dc93064f	{'Andrey Tarantsov': 46}	read all; cross-CPU results and throttle control
+/Users/andreyvit/Developer/andreyvit/smscoderemoteaccess	f149e146ff272f072c7862ce5780129338fb7d86	{'Andrey Tarantsov': 44}	README read; historical personal tool; not security default
+/Users/andreyvit/Developer/andreyvit/christmaslights	4532c257c4d812a73ce612b632f7c47019f3f0e0	{'Andrey Tarantsov': 21}	README and simulator/C interfaces sampled; see 63-small-tools.md
+/Users/andreyvit/Developer/andreyvit/openai	373f01ee85a7237115cfc4b4771f96dafd474cab	{'Andrey Tarantsov': 104}	read rationale/API; small inspectable SDK; no current API recommendation
+/Users/andreyvit/Developer/andreyvit/minicomponents	946a6c3bbb0389ec314e393b5b3cf65864a69e20	{'Andrey Tarantsov': 5}	implementation sampled; template composition/errors; see 60-other-code.md
+/Users/andreyvit/Developer/andreyvit/router	6123c3fa7b9f272fc10709ee748a02e30288ba2d	{'Andrey Tarantsov': 2}	README/doc/builder sampled; intended middleware API unfinished; see 60-other-code.md
