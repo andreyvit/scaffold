@@ -4,8 +4,8 @@ Run small migrations automatically at startup, before readiness. Default budget:
 
 Move large rewrites to explicit preview-and-execute maintenance operations. Follow the bulk-operation policy for transaction boundaries and resumption; do not assume automatic resume.
 
-Check duration against representative data sizes. The budget does not prescribe killing or interrupting a write transaction; overrun handling remains open.
+Enforce the budget through testing against representative data sizes. If a startup migration exceeds 5 seconds at runtime, let it finish safely and log the overrun; do not impose a runtime cutoff for this budget.
 
 Restrict maintenance preview/execution to authorized operators. Measure migration duration and failures; log migration ID, result and duration without customer data or secrets.
 
-Compatibility with older executables and rollback policy remain open.
+Strong initial default: best-effort compatibility with the previous executable. Rollback compatibility is ultimately a business decision; reevaluate once MVP is reached. The milestone triggers review, not a mandatory compatibility guarantee. Recovery remains operator-directed.

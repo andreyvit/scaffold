@@ -1,6 +1,6 @@
 # Scaffold research
 
-Initial source research and expanded LifeBase/hiring pass complete, with [coverage gaps](03-coverage.md). Architecture interview ongoing; [confirmed decisions](78-confirmed-decisions.md) currently reach C58. **Resume from the exact unanswered question in [STATE.md](STATE.md#resume-here).**
+Initial source research and expanded LifeBase/hiring pass complete, with [coverage gaps](03-coverage.md). Architecture interview ongoing; [confirmed decisions](78-confirmed-decisions.md) currently reach C60. **Resume from the exact unanswered question in [STATE.md](STATE.md#resume-here).**
 
 ## Start here
 1. [Confirmed values](70-values.md)

@@ -1,16 +1,16 @@
 # Scaffold research state
 
 Goal: extract Andrey’s engineering values from original material; use them to choose architecture defaults and useful questions.
-Started: 2026-10-18 (Maldives). Initial source pass and expanded LifeBase/hiring pass complete; coverage limits remain recorded. Core values confirmed; native mobile chosen. Interview has reached C58. Two further value candidates remain labelled, not approved.
+Started: 2026-10-18 (Maldives). Initial source pass and expanded LifeBase/hiring pass complete; coverage limits remain recorded. Core values confirmed; native mobile chosen. Interview has reached C60. Two further value candidates remain labelled, not approved.
 
 ## Resume here
 Canonical repository: `/Users/andreyvit/Developer/andreyvit/scaffold`. Research moved here from `~/env` on 2026-10-23. Continue in this repo.
 
-**Next action: ask the unanswered migration-compatibility question below.** The user interrupted the interview to move repositories; no answer was given. The assistant's proposed choice is not confirmed.
+**Next action: ask the unanswered background-job durability question below.** Migration budget behavior is confirmed in C60; this next proposal is not confirmed.
 
-> Must migrations keep the previous executable usable, or is rollback compatibility best-effort—with a forward fix preferred when preserving compatibility would complicate the code? I’d propose the latter.
+> When a business change schedules background work—such as a confirmation email—should the job be saved in the same database transaction, so a crash cannot lose the work? I recommend this default, with execution in the existing app process.
 
-Context: [C58](78-confirmed-decisions.md) confirms small automatic startup migrations with a **5-second budget per migration**; large rewrites use preview-and-execute maintenance operations. [C49](78-confirmed-decisions.md) rejects automatic rollback/recovery until serious SRE scenario testing. This question concerns whether an operator can run the previous executable against migrated data. See [migration notes](91-migrations.md) and [recipe](../../skills/scaffold/references/migrations.md).
+Context: C35 keeps requests, jobs and analytics in one process. C42 forbids automatic job retry after unexpected panics. The proposed transaction rule covers durable scheduling, not exactly-once delivery or automatic recovery of every job. Operation taxonomy and bulk-resumption machinery remain deferred. See [confirmed decisions](78-confirmed-decisions.md), [operations](74-operations.md) and [changesets](81-changesets.md).
 
 Interview **one question at a time, max terse**, with all necessary context. After each answer, update this resume block, append state/confirmation records, and update the relevant topic and recipe. Preserve reasons and qualifications. Never count an assistant proposal as user approval.
 
@@ -431,3 +431,15 @@ Start at “Resume here,” then read only relevant confirmed decisions and topi
 - Updated existing global Codex/Claude scaffold links. Added repository-local `.agents/skills` links for scaffold, sync and terse.
 - README and AGENTS.md lead to the “Resume here” block at the top of this file. Older interview/scope outlines explicitly point there. Migration-compatibility question is still unanswered; C58 is the latest confirmed decision.
 - Verified all relative Markdown targets, skill frontmatter and discovery links. Bundled validator remains unavailable under system Python because PyYAML is missing; manual checks passed. No commit or push performed.
+
+## 2026-10-23 — Migration compatibility through MVP
+- C59: rollback compatibility is ultimately a business decision. Start with a strong best-effort default; reevaluate once MVP is reached. MVP triggers review, not automatic adoption of mandatory compatibility.
+- User: “For migrations, it’s a business decision eventually, but we start with strong default for best effort, and reevaluate once MVP is reached.”
+- Continued the interview from env's “Expand scaffold architecture recipes” in the extracted scaffold repository; cloud checkout `/workspace/scaffold`.
+- Updated confirmations, migration notes and recipe. C49 operator-directed recovery remains unchanged.
+- Next: whether a migration exceeding 5 seconds should finish safely and log the overrun, enforcing the budget through testing rather than a runtime cutoff. Proposal only.
+
+## 2026-10-23 — Migration budget enforcement
+- C60: user accepted allowing startup migrations to finish safely after exceeding 5 seconds, logging the overrun and enforcing the budget through testing rather than a runtime cutoff.
+- Updated migration notes, recipe and confirmation record. Per-migration scope remains C58; total startup limit is still unselected.
+- Next: durable scheduling of business jobs in the same transaction as the originating business change, with execution in the existing process. Proposal only; retry/recovery and operation taxonomy are not selected.

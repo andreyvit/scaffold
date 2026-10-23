@@ -168,3 +168,9 @@ Verify that the app can launch against restored data, but for most apps keep it 
 
 ## 2026-10-23 · C58 · Startup migration budget
 Small migrations run automatically at startup; large rewrites use preview-and-execute maintenance operations. Default budget is 5 seconds per migration. No total startup limit or forced-abort mechanism selected. [Details](91-migrations.md) · [Recipe](../../skills/scaffold/references/migrations.md).
+
+## 2026-10-23 · C59 · Best-effort migration compatibility until MVP review
+Compatibility with the previous executable is ultimately a business decision. Start with a strong default of best-effort rollback compatibility; reevaluate once MVP is reached. This milestone requires review, not an automatic switch to mandatory compatibility. [Details](91-migrations.md) · [Recipe](../../skills/scaffold/references/migrations.md).
+
+## 2026-10-23 · C60 · Migration overruns finish safely
+Allow startup migrations exceeding the 5-second budget to finish safely and log the overrun. Enforce the budget through testing rather than a runtime cutoff. User accepted this proposal; no total startup limit selected. [Details](91-migrations.md) · [Recipe](../../skills/scaffold/references/migrations.md).
