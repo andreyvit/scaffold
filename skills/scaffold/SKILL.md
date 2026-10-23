@@ -22,3 +22,23 @@ From project start, include the [AI development harness](references/development-
 For Go production packaging, use [deployment](references/go-deployment.md).
 
 For off-server backups and restore, use [backups](references/backups.md).
+
+For background jobs, use [jobs](references/jobs.md).
+
+For superstaff access and customer-data auditing, use [customer data access](references/customer-data-access.md).
+
+For authorization foundations and optional role customization, use [permissions](references/permissions.md).
+
+For SSR, progressive enhancement and rich-page alternatives, use [web rendering](references/web-rendering.md).
+
+For JavaScript, bundling and TypeScript exceptions, use [frontend tooling](references/frontend-tooling.md).
+
+For project-local units and authorized library extraction, use [library boundaries](references/library-boundaries.md).
+
+For email-code and passkey login, use [login](references/login.md).
+
+For uploaded-file storage and delivery, use [uploads](references/uploads.md).
+
+For metrics, analytics, tracing and logging from project start, use [observability](references/observability.md).
+
+For transactional email delivery, use [email](references/email.md).

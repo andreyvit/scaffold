@@ -31,3 +31,31 @@ Evidence: [Bubblehouse](21-bubblehouse.md), [Happy Grid](10-happy-grid.md), [Uly
 
 ## Business outcomes — confirmed
 Instrument the monetization/conversion funnel, monitor performance and test alternatives. This is ongoing product operation, not just an upfront architecture decision. Experiments and feature flags belong from day one; concurrent A/B testing is preferred, with sequential trials also supported. Specific events, cadence, assignment and evaluation mechanics remain to be chosen. [Context](83-business-and-onboarding.md).
+
+## Background jobs — confirmed C61
+Queue in the main database by default; persist scheduled jobs with the originating business change in the same transaction where feasible. This follows from the architecture, not a separate preference tradeoff. Execution stays in-process (C35); no automatic retry after unexpected panic (C42). [Recipe](../../skills/scaffold/references/jobs.md).
+
+## Customer-data access audit — confirmed C62
+Superstaff may access client data. Audit meaningful access by any user: customer details views count; names in lists do not. Record bulk operations such as exports once, without enumerating each customer touched by default. [Details](92-customer-data-access.md) · [Recipe](../../skills/scaffold/references/customer-data-access.md).
+
+## Uploaded files — confirmed C73
+Object storage is authoritative; prefer B2's S3-compatible interface. App-controlled URLs preserve the storage boundary; separate serving domains depend on content. Presigned redirects are allowed. Local disk is only a cache when the app serves bytes. [Details](98-upload-storage.md) · [Recipe](../../skills/scaffold/references/uploads.md).
+
+C74: uploads pass through the server by default for vetting before durable storage. Direct uploads for frequent large media use explicit completion plus a reconciliation job for files present despite missed completion calls, then content vetting. This exception does not change C49's production-recovery policy.
+
+## Observability — confirmed C75
+Metrics, analytics, spans and good logging belong from project start, with broad metrics coverage. Anomaly monitoring on selected metrics is planned. BH's current setup is rudimentary, not a selected operational reference. Tooling and mechanics remain open; [solution space and assistant proposals](99-observability.md) · [Recipe](../../skills/scaffold/references/observability.md).
+
+C76: BH uses Grafana Cloud, but reported cost/slowness discourage everyday investigation. Seek a lightweight alternative; no replacement selected. Self-hosting Grafana is not assumed to solve this experience. [Context](99-observability.md).
+
+C77: no Protobuf or OTLP. Seek an integrated lightweight Go solution on one server. Earlier OTLP proposals are superseded; [candidate search](100-lightweight-inspectability.md) found partial fits, no verified complete match. No replacement selected.
+
+C78 clarifies C77: a small handwritten OTLP encoder without a Protobuf dependency is acceptable in principle. Wire format alone no longer excludes a tool; plain-Go simplicity and integrated capability still require evaluation. No full SDK, collector or backend selected.
+
+C79: alternatives recorded for later trials, including Jaeger; backend selection deferred. [Brief candidate list](100-lightweight-inspectability.md).
+
+C80: prefer direct telemetry files with rotation and indexes; Prometheus/PromQL are soft exceptions rather than the default. [Design and critique](102-file-based-observability.md). No exact store/rotation/index mechanism chosen.
+
+C81: observability/anomaly details tabled pending Andrey's own experiments. All candidates and file/index alternatives retained; no further recommendations selected.
+
+C82: transactional email uses Postmark or Mailchimp; sending is a job under the existing database/process defaults. [Details](103-transactional-email.md) · [Recipe](../../skills/scaffold/references/email.md).

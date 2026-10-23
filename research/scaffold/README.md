@@ -1,6 +1,8 @@
 # Scaffold research
 
-Initial source research and expanded LifeBase/hiring pass complete, with [coverage gaps](03-coverage.md). Architecture interview ongoing; [confirmed decisions](78-confirmed-decisions.md) currently reach C60. **Resume from the exact unanswered question in [STATE.md](STATE.md#resume-here).**
+Initial source research and expanded LifeBase/hiring pass complete, with [coverage gaps](03-coverage.md). Architecture interview ongoing; [confirmed decisions](78-confirmed-decisions.md) currently reach C82. **Resume from the exact unanswered question in [STATE.md](STATE.md#resume-here).**
+
+[Where the interview stands and what remains](104-interview-overview.md)
 
 ## Start here
 1. [Confirmed values](70-values.md)
@@ -20,6 +22,17 @@ Initial source research and expanded LifeBase/hiring pass complete, with [covera
 - [Error handling](89-error-handling.md)
 - [Backups](90-backups.md)
 - [Migrations](91-migrations.md)
+- [Customer data access](92-customer-data-access.md)
+- [Rich web pages](93-rich-web-pages.md)
+- [Frontend tooling](94-frontend-tooling.md)
+- [Server templating — strategic work](95-server-templating.md)
+- [Library boundaries](96-library-boundaries.md)
+- [Email-code and passkey login](97-login-methods.md)
+- [Uploaded-file storage](98-upload-storage.md)
+- [Observability](99-observability.md) · [Lightweight candidates](100-lightweight-inspectability.md) · [Anomaly detection](101-lightweight-anomaly-detection.md)
+- [Files and indexes for observability](102-file-based-observability.md)
+- [Transactional email](103-transactional-email.md)
+- Observability details deferred pending Andrey’s own experiments (C81); all options above retained.
 - [Compact recipe shape](75-recipe-shape.md) · [Modern options](76-modern-options.md)
 - [Research → interview → recipes](77-research-method.md)
 

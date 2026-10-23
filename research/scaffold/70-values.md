@@ -39,6 +39,20 @@ Build a good harness from day one. Isolated instances, shared fixtures and inspe
 ## Operational automation — confirmed 2026-10-21
 Keep infrastructure dumb until serious SRE scenario testing earns automated recovery. Recovery logic can misread a failure and cause more harm than the original problem. Manual failed-deploy recovery is the default. Strengthens V10/V11: recoverability does not imply automatic intervention. [C49](78-confirmed-decisions.md).
 
+## Simplicity, low churn and avoidable costs — confirmed C65 · 2026-10-23
+**V16: Value low churn alongside simplicity.** Andrey calls these primary values when judging a framework and its ecosystem. Prefer pragmatic tools without recurring complexity or unnecessary changes. His Svelte impression is provisional; change the tool judgment when evidence contradicts it.
+
+V13/V14 also apply to modest costs: an avoidable loading delay need not be business-critical to prefer a better approach. When already accepting compilation, consider using it to produce efficient runtime code. This does not establish an unlimited optimization budget or a universal preference for extra build machinery. [Full frontend rationale](93-rich-web-pages.md).
+
+## Dynamic languages and tool cost — confirmed C66 · 2026-10-23
+Dynamic typing is acceptable with strong integration coverage; Andrey has long experience with JavaScript and Ruby. Plain JavaScript and minimal bundling are preferred. Frontend test coverage matters more than static typing. Additional language/build machinery needs compelling evidence, including in agentic work; future evidence may change the balance. A genuinely JS-heavy codebase can eventually justify TypeScript. Strengthens V4/V8/V10/V14 without prescribing dynamic typing for every platform. [Details](94-frontend-tooling.md).
+
+## Library boundaries mature through use — confirmed C69 · 2026-10-23
+V4/V7 favor a clear scope, not automatic extraction. Build a separate package/unit inside the project by default. Entirely domain-independent reusable code benefits from separation; offer extraction after production proof and a few months of API stability. Each extraction needs explicit user authorization. [Details](96-library-boundaries.md).
+
+## Count coordination costs — confirmed C74 · 2026-10-23
+The upload example strengthens V4/V11/V13: avoiding server bandwidth is not automatically simpler when it adds completion events, reconciliation and later content checks. Default to the server path; frequent large media may justify direct upload with explicit finalization and a reconciliation job. [Details](98-upload-storage.md).
+
 ## Working decision rule — proposed
 State the need → choose the smallest sufficient design → name its limits → check failure and operation → preserve the reason.
 

@@ -6,7 +6,7 @@ Questions entering: do older implementations contradict the emerging defaults? W
 - `router` explicitly aims to make omitted auth/CORS/cache middleware impossible, with deliberate overrides. This predates the same Happy Grid request. **Intent only:** middleware builder methods are empty in this old snapshot.
 - `httpserver` binds to localhost by default and distinguishes initiating shutdown from waiting for it. Safety and lifecycle are part of the small API.
 - `httpform` uses reflection. The later rejection of reflection for domain mutation is not a universal ban; ask which failure modes are acceptable.
-- `minicomponents` adds component syntax by rewriting templates; source-positioned errors. Supports the desire for better SSR composition without moving the whole UI to a client framework.
+- `minicomponents` adds component syntax by rewriting templates; source-positioned errors. Historical evidence for SSR composition. **C68 update:** Andrey largely stopped using it in a large project because rewriting causes restrictive scoping limitations. Plans an owned templating language; do not infer minicomponents as the default. [Current direction](95-server-templating.md).
 - `mvp` is a substantial owned framework. `buddyd` uses its hooks, actor/session model and declared changes. Current Happy Grid favors separated pieces. Keep this evolution visible.
 - `journal` explains one-second timestamps through the actual query need and compact encoding. Its recovery policy truncates corrupted tail data; that policy needs an explicit loss boundary, not blind reuse.
 - `watchdog` monitors freshness of backup/script check-ins. A live server does not imply maintenance work is succeeding.

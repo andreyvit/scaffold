@@ -10,3 +10,5 @@ Use HappiGrid's default:
 Purpose: make changes and refactoring safe. Coverage and scenario completeness complement each other; neither replaces checking real behavior.
 
 Provide the [AI development harness](development-harness.md) from day one; share fixtures with integration tests.
+
+For frontend code, dynamic typing is acceptable with excellent integration coverage. Prioritize coverage of real behavior over static typing; TypeScript does not replace it. See [frontend tooling](frontend-tooling.md).

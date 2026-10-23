@@ -38,3 +38,6 @@ The SPA escalation rule is confirmed; the rest of this example remains proposed 
 `ID · choice · why/value · applies to · exception · revisit when · source/date`
 
 Proposed → confirmed / revised / rejected. Record disagreement and supersession; never silently erase the earlier reason.
+
+## Code ownership — confirmed C69
+Recipes build project-local packages/units by default. Offer a separate library for genuinely domain-independent reusable code once production use and several months of API stability support extraction. Each extraction requires explicit user authorization. This does not prevent an explicitly chosen standalone library such as the planned templating language. [Details](96-library-boundaries.md).

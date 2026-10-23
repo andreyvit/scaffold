@@ -174,3 +174,69 @@ Compatibility with the previous executable is ultimately a business decision. St
 
 ## 2026-10-23 · C60 · Migration overruns finish safely
 Allow startup migrations exceeding the 5-second budget to finish safely and log the overrun. Enforce the budget through testing rather than a runtime cutoff. User accepted this proposal; no total startup limit selected. [Details](91-migrations.md) · [Recipe](../../skills/scaffold/references/migrations.md).
+
+## 2026-10-23 · C61 · Main-database job queue; skip obvious choices
+Job queue lives in the main database by default. Saving scheduled jobs in the same transaction as the originating business change is the obvious choice when technically feasible. Interview real design tradeoffs and values, not consequences already determined by the architecture. [Method](77-research-method.md) · [Recipe](../../skills/scaffold/references/jobs.md).
+
+## 2026-10-23 · C62 · Superstaff access and meaningful access auditing
+Superstaff may access client data. Keep a customer-data access journal for any user: opening details counts; seeing a name in a list does not. Record bulk actions such as exports as bulk operations, without enumerating every customer touched by default. [Details](92-customer-data-access.md) · [Recipe](../../skills/scaffold/references/customer-data-access.md).
+
+## 2026-10-23 · C63 · Roles in the foundation; customization UI optional
+Code includes permissions and roles from the start, with default roles. Offer role-customization UI as a separate feature and implement it only when authorized for the product. Supersedes the assistant's fixed-vs-custom-roles framing: internal capability and exposed product UI are separate decisions. [Details](73-accounts-decisions.md) · [Recipe](../../skills/scaffold/references/permissions.md).
+
+## 2026-10-23 · C64 · Stimulus proven; consider Svelte before React
+Stimulus works well as a connection point; Andrey has not needed React himself. For richer client behavior, consider Svelte before React; Andrey confirmed the initially forgotten name. This selects an evaluation preference, not a mandatory dependency. Reasons and qualifications recorded in C65. [Details](93-rich-web-pages.md) · [Recipe](../../skills/scaffold/references/web-rendering.md).
+
+## 2026-10-23 · C65 · Svelte rationale: payload, simplicity and low churn
+Prefer less runtime JavaScript and avoid unnecessary loading delay even when not business-critical if a better approach exists. Simplicity and low churn are primary values. Limited Svelte experience suggests a pragmatic fit; contrary evidence would change that judgment. Andrey dislikes React's direction since hooks and the overengineering he sees especially in its ecosystem. If JSX already calls for compilation, he would rather consider Svelte compiling to efficient JavaScript. These are reasons for the preference, not benchmark results or unconditional Svelte adoption. [Details](93-rich-web-pages.md) · [Values](70-values.md).
+
+## 2026-10-23 · C66 · Plain JavaScript and minimal bundling; TypeScript last resort
+Strongly prefer plain JavaScript and the simplest bundling. Previous owned bundler used JSON dependency frontmatter and concatenation with optional wrapping. TypeScript needs compelling benefits over its perceived complexity/build cost; last use was years ago. Dynamic typing is acceptable with integration tests; excellent frontend coverage matters more. Agentic work could change the balance, but no evidence yet. Reconsider excessive client code architecturally; genuinely JavaScript-heavy projects may eventually grow into a justified TS transition. [Details](94-frontend-tooling.md) · [Recipe](../../skills/scaffold/references/frontend-tooling.md).
+
+## 2026-10-23 · C67 · Tailwind remains the CSS starting point
+Tailwind remains the preferred CSS starting point and useful shared styling vocabulary. User confirmed the earlier preference; no specific version, custom subset or build pipeline selected. [Details](94-frontend-tooling.md) · [Recipe](../../skills/scaffold/references/frontend-tooling.md).
+
+## 2026-10-23 · C68 · Templating needs strategic replacement
+No fully satisfactory templating solution yet. Good component support is required. Minicomponents remains the best hack so far, but template-rewriting scoping limitations led Andrey to largely stop using it in a large project. He plans an owned templating language with components; treat this as separate strategic work, not a selected or implemented engine. [Details](95-server-templating.md) · [Recipe](../../skills/scaffold/references/web-rendering.md).
+
+## 2026-10-23 · C69 · Project-local first; deliberate library extraction
+Default to a separate package/unit inside the project. Entirely domain-independent, reusable, non-project-specific code benefits from separation to keep boundary and scope crystal clear; a templating language is an example. Normally offer extraction after production proof and API stability over a few months of use. Every extraction is an explicit decision requiring user authorization. [Details](96-library-boundaries.md) · [Recipe](../../skills/scaffold/references/library-boundaries.md).
+
+## 2026-10-23 · C70 · Library compatibility depends on consumers
+Library API compatibility decisions depend on who uses the library and must be vetted by the user. No blanket preference for coordinated breaking changes or preserving old APIs. [Details](96-library-boundaries.md) · [Recipe](../../skills/scaffold/references/library-boundaries.md).
+
+## 2026-10-23 · C71 · Email codes by default; passkeys from the start
+Where sending email is possible, default initial login to email codes for security/ease of access. Code required for cross-device use; accompanying link optional. Require macOS/iOS recognition and autofill. Offer passkeys from the start with smooth “passkey or email” UX. Other methods are product decisions. Passkey-before-email capability was researched separately; enrollment/recovery details are not yet selected. [Details](97-login-methods.md) · [Recipe](../../skills/scaffold/references/login.md).
+
+## 2026-10-23 · C72 · Enroll passkey after email login; retain email access
+Signup/login flow: verify email code, automatically offer passkey creation with the normal confirmation prompt, then allow either passkey or email-code login. User clarified that “automatic” means offering enrollment without waiting for a request; confirmation is welcome and silent creation is not required. Email login stays available. [Details](97-login-methods.md) · [Recipe](../../skills/scaffold/references/login.md).
+
+## 2026-10-23 · C73 · S3-compatible uploads, B2 preferred, app-owned URLs
+Store uploads in S3-compatible storage; recommend Backblaze B2 over Amazon S3. Keep the provider internal and route file URLs through the app by default, using a separate serving domain when the content warrants it. Presigned redirects are an option. Local disk is only a cache of stored objects, useful when the app serves files itself. [Details](98-upload-storage.md) · [Recipe](../../skills/scaffold/references/uploads.md).
+
+## 2026-10-23 · C74 · Upload through server; direct media uploads need finalization
+Default to uploads through the app server and vet raw content before durable storage. Consider direct uploads for frequent large media; require a final server call/equivalent, a job to recover missed completion calls when objects actually arrived, and post-upload content vetting. Avoid the completion-event infrastructure burden experienced with SNS. [Details](98-upload-storage.md) · [Recipe](../../skills/scaffold/references/uploads.md).
+
+## 2026-10-23 · C75 · Metrics, analytics, spans and logs from the start
+Metrics for everything are required; new projects need metrics, analytics, spans and good logging from day one. Andrey plans anomaly monitoring on selected metrics. Bubblehouse's setup is still rudimentary; he requests guidance on the solution space. No stack or anomaly algorithm selected. [Details and proposals](99-observability.md) · [Recipe](../../skills/scaffold/references/observability.md).
+
+## 2026-10-23 · C76 · Grafana Cloud costly and slow; seek lightweight observability
+BH runs Grafana Cloud. Andrey reports high cost and slowness that makes it a last resort during investigations, though the team still uses it then. He would love a lightweight project covering the required observability capabilities. No replacement or build decision selected. [Experience and trace-format explanation](99-observability.md).
+
+## 2026-10-23 · C77 · Initial Protobuf/OTLP rejection; clarified by C78
+Initially reject Protobuf and OTLP for the observability design. Seek a lightweight integrated project in plain Go running on one server with little operational fuss; Andrey expects an owned alternative may be needed. No concrete format, store or project selected. Earlier assistant OTLP recommendations are superseded. [Candidate research](100-lightweight-inspectability.md).
+
+## 2026-10-23 · C78 · Handwritten OTLP output may avoid the rejected dependency
+Clarifies C77: producing OTLP is acceptable in principle if the relevant binary fields are hardcoded in a lightweight encoder without a Protobuf dependency. This reopens wire compatibility, not adoption of a Protobuf library/toolchain, OpenTelemetry SDK or backend. No implementation selected. [Details](100-lightweight-inspectability.md).
+
+## 2026-10-23 · C79 · Save inspectability options; evaluate later, including Jaeger
+Record the discussed alternatives briefly for later hands-on trials. Include Jaeger; no backend selected and no trials requested now. [Consolidated list](100-lightweight-inspectability.md#try-later--confirmed-c79--2026-10-23).
+
+## 2026-10-23 · C80 · Prefer direct telemetry files and indexes; Prometheus stance is soft
+Prefer a simpler default than Prometheus/PromQL, which Andrey views as overengineering for the expected non-distributed system; BH currently uses Prometheus and justified exceptions remain possible. Write directly to rotated files/journals, possibly compressed/encrypted, and index for fast access. Exact tools/mechanics remain open; user requests critique, not immediate implementation. [Assessment](102-file-based-observability.md).
+
+## 2026-10-23 · C81 · Defer observability details until personal experiments
+Save all observability, anomaly-detection and file/index options and table the topic. Andrey needs to experiment himself before making more detailed recommendations. Preserve requirements and qualified preferences; no backend, format, algorithm or implementation selected. [Tools](100-lightweight-inspectability.md) · [Anomaly detection](101-lightweight-anomaly-detection.md) · [Files/indexes and metric output](102-file-based-observability.md).
+
+## 2026-10-23 · C82 · Postmark or Mailchimp; email is a job
+Use Postmark or Mailchimp for transactional email. Sending an email should be a job. No ranking between providers or new retry/delivery guarantee selected. [Details](103-transactional-email.md) · [Recipe](../../skills/scaffold/references/email.md).

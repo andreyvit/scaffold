@@ -1,20 +1,20 @@
 # Scaffold research state
 
 Goal: extract Andrey’s engineering values from original material; use them to choose architecture defaults and useful questions.
-Started: 2026-10-18 (Maldives). Initial source pass and expanded LifeBase/hiring pass complete; coverage limits remain recorded. Core values confirmed; native mobile chosen. Interview has reached C60. Two further value candidates remain labelled, not approved.
+Started: 2026-10-18 (Maldives). Initial source pass and expanded LifeBase/hiring pass complete; coverage limits remain recorded. Core values confirmed; native mobile chosen. Interview has reached C82. Two further value candidates remain labelled, not approved.
 
 ## Resume here
 Canonical repository: `/Users/andreyvit/Developer/andreyvit/scaffold`. Research moved here from `~/env` on 2026-10-23. Continue in this repo.
 
-**Next action: ask the unanswered background-job durability question below.** Migration budget behavior is confirmed in C60; this next proposal is not confirmed.
+**Next action: use the requested overview to orient the remaining interview.** C82 settles transactional email: Postmark or Mailchimp, with email sent as a job. User also requested a list of what remains; [overview](104-interview-overview.md) distinguishes settled foundations, useful remaining topic groups, deferred work and synthesis.
 
-> When a business change schedules background work—such as a confirmation email—should the job be saved in the same database transaction, so a crash cannot lose the work? I recommend this default, with execution in the existing app process.
+No question is pending. Remaining cross-cutting topics are account lifecycle/recovery, data lifecycle/portability, APIs/integrations, billing/entitlements where relevant, and any non-obvious expected-job-failure policies. These are candidate topic groups, not mandatory questions or features. Resume one substantive question at a time after the overview; do not ask implementation-obvious choices.
 
-Context: C35 keeps requests, jobs and analytics in one process. C42 forbids automatic job retry after unexpected panics. The proposed transaction rule covers durable scheduling, not exactly-once delivery or automatic recovery of every job. Operation taxonomy and bulk-resumption machinery remain deferred. See [confirmed decisions](78-confirmed-decisions.md), [operations](74-operations.md) and [changesets](81-changesets.md).
+Observability remains tabled until personal experiments (C81). Modern Apple internals, staff/customer identity separation, change/operation details and custom templating remain separate/deferred as recorded. Native mobile has a later implementation-recipe pass; direction is already settled.
 
-Interview **one question at a time, max terse**, with all necessary context. After each answer, update this resume block, append state/confirmation records, and update the relevant topic and recipe. Preserve reasons and qualifications. Never count an assistant proposal as user approval.
+Interview **one question at a time, max terse**, with all necessary context. After each answer, update this resume block, append state/confirmation records, and update the relevant topic and recipe. Preserve reasons and qualifications. Never count an assistant proposal as user approval. Ask only about real tradeoffs, supported requirements or values; derive obvious engineering consequences and verify feasibility yourself.
 
-Later: continue server/web architecture and operational defaults; auth/permissions, jobs and observability still need decisions. Modern Apple internals require a separate later research step; staff/customer identity separation and operation taxonomy remain deferred. Do not reopen those now. Older “Next” entries below and the scope/question outlines are historical, not the current cursor.
+Later: continue server/web architecture and operational defaults; auth/permissions and jobs still have open details; observability is deferred pending personal experiments (C81). Modern Apple internals require a separate later research step; staff/customer identity separation and operation taxonomy remain deferred. Server templating is separate strategic work (C68), with an owned component-capable language planned. Do not reopen those now. Older “Next” entries below and the scope/question outlines are historical, not the current cursor.
 
 ## Contract
 - Work sequentially: Happy Grid → Bubblehouse → personal repos → Heynote → Zoo v1/skills → LifeBase → Ulysses; revisit earlier sources when new evidence helps.
@@ -443,3 +443,164 @@ Start at “Resume here,” then read only relevant confirmed decisions and topi
 - C60: user accepted allowing startup migrations to finish safely after exceeding 5 seconds, logging the overrun and enforcing the budget through testing rather than a runtime cutoff.
 - Updated migration notes, recipe and confirmation record. Per-migration scope remains C58; total startup limit is still unselected.
 - Next: durable scheduling of business jobs in the same transaction as the originating business change, with execution in the existing process. Proposal only; retry/recovery and operation taxonomy are not selected.
+
+## 2026-10-23 — Interview granularity and job queue
+- C61: user corrected the job question as obvious given the default main-database queue. Persist jobs in the originating transaction where technically feasible.
+- User: “We’re not here to do obvious choices.” Ask about competing benefits, requirements and values; derive engineering consequences and investigate feasibility without preference approval.
+- Updated AGENTS, interview method, confirmations, operations notes and jobs recipe. Existing C35/C42 retained; no new retry/recovery guarantees inferred.
+- Next: support access to customer content by authorized staff vs explicit temporary customer grants. Real tradeoff: support speed/friction vs customer control. Proposed default is scoped, audited access; not confirmed. Staff/customer identity separation remains deferred.
+
+## 2026-10-23 — Superstaff access and customer-data audit
+- C62: superstaff may access client data. Keep an audit journal of customer-data access by any user.
+- Granularity: opening customer details counts; seeing a name in a list does not. Bulk operations such as export get a bulk entry, without enumerating every customer touched by default.
+- Updated confirmations, account/operations notes and dedicated source/recipe. Do not broaden superstaff access into all-staff permission bypass. Audit visibility, retention and exact schema unselected; identity separation still deferred.
+- Next: B2B customer-defined roles from the start vs fixed roles until concrete need. Proposed fixed-role default trades flexibility for less setup/support burden; not confirmed.
+
+## 2026-10-23 — Authorization foundation vs optional UI
+- C63: permissions and roles in code from the start, including default roles. Offer role-customization UI separately; implement only when authorized for the product.
+- User corrected the question as a product decision. Supersedes the proposed fixed-role-only starting policy; internal capability and exposed UI are separate.
+- Updated accounts, permissions recipe, entrypoint, confirmations, AGENTS and interview method. Existing multiple-login architecture illustrates the same distinction; no blanket mandate to prebuild speculative capabilities.
+- Next: gather firsthand experience with rich-page composition inside SSR to guide focused research. No tool recommendation or selection yet; SSR/SPA boundary remains confirmed.
+
+## 2026-10-23 — Stimulus experience and compiled reactivity
+- C64: Stimulus works great as a connection point; Andrey has never personally needed React. Would consider a compiled-to-JavaScript reactive framework before React when richer machinery is needed.
+- Name forgotten. Assistant suggested Svelte; awaiting confirmation. Evaluation preference only, not a selected dependency or a stated runtime/performance value.
+- 37signals calendar React use recorded as user recollection, not verified external evidence.
+- Updated architecture, confirmations, rich-page source note and web-rendering recipe. C37 preserved.
+- Next: confirm Svelte identification; do not record the guessed name as a user decision.
+
+## 2026-10-23 — Svelte name confirmed
+- User confirmed: “Yeah I meant Svelte.” Updated C64, architecture, source note and web-rendering recipe to name Svelte as the candidate to consider before React.
+- Evaluation preference only; do not infer mandatory adoption or reasons the user has not supplied.
+- Next: ask what attracts Andrey to Svelte over React; preserve the reason to guide later choices.
+
+## 2026-10-23 — Svelte rationale and low churn
+- C65: lower runtime JS payload/loading delay; avoid suboptimal choices even when the cost is not crucial if a better approach exists. Simplicity and low churn are primary values.
+- Limited Svelte use suggests pragmatic simplicity/low churn; contrary evidence would change the judgment. React's post-hooks direction and especially ecosystem overengineering are Andrey's criticisms, not independently established universal facts.
+- Compilation reasoning: desired JSX workflow already involves compiling; Svelte can use that step to produce efficient JS. No blanket no-build rule or mandatory compiler inferred.
+- Updated source note, recipe, architecture, confirmations and values (V16 plus V13/V14 clarification). No benchmarks or current upgrade/churn review claimed.
+- Next: TypeScript vs plain JavaScript default for frontend/Stimulus. Suggested TypeScript with restrained annotations; unconfirmed.
+
+## 2026-10-23 — Plain JavaScript and minimal frontend tooling
+- C66: plain JS, simplest bundling; owned historical bundler used JSON dependency frontmatter and concatenation/optional wrapping. Record example without mandating its exact design.
+- Reject proposed TypeScript default. Last-resort exception needs compelling benefits over perceived language/build complexity; experience is several years old, not current benchmark evidence.
+- Dynamic typing acceptable with integration tests; long JS/Ruby history. Excellent frontend coverage matters more. Agentic work has not yet shown plain JS insufficient, though future evidence could change the balance.
+- Unmanageable client code suggests an architecture problem; genuinely JS-heavy projects may nevertheless grow into TS. Preserve both qualifications.
+- Updated source, recipe, architecture, values, testing and confirmations. No bundler implementation inspected or current tooling benchmark run.
+- Next: current CSS approach vs historical Tailwind vocabulary. No CSS default selected.
+
+## 2026-10-23 — Tailwind confirmed
+- C67: user confirmed Tailwind remains the preferred CSS starting point/shared styling vocabulary.
+- Updated frontend tooling note/recipe, architecture and confirmations. No custom Tailwind subset, version or build pipeline inferred; minimal tooling remains C66.
+- Next: does historical minicomponents provide the desired server-template composition, or are shortcomings still to address? No template engine selected.
+
+## 2026-10-23 — Templating remains strategic work
+- C68: no fully satisfactory solution; good components required. Minicomponents is the best hack so far but rewriting/scoping limits led Andrey to largely stop using it in a large project.
+- Plans to build an owned templating language with components soon. Recorded as a future strategic direction, not implementation authorization, a scheduled commitment or an available dependency.
+- Updated source note, web recipe, architecture, confirmations and historical minicomponents finding. No interim engine selected; do not continue with language-design details now.
+- Next: boundary between shared maintained libraries and app-owned scaffold code; ownership-first alone does not answer this. No default proposed.
+
+## 2026-10-23 — Library boundary and extraction policy
+- C69: build project-local separate packages/units by default. Entirely domain-independent, reusable, non-project-specific code benefits from separate scope; templating language is the user's example.
+- Normal path: production proof and stable API after a few months of usage, then offer extraction. Explicit user authorization required each time; this answer does not authorize any extraction.
+- Updated source note, recipe, values, architecture, recipe shape and confirmations. No fixed maturity threshold or ban on explicitly chosen standalone work inferred.
+- Next: coordinated breaking API changes across owned apps vs preserving backward compatibility. Not yet decided; distinct from migration rollback or public third-party API promises.
+
+## 2026-10-23 — Library compatibility requires user judgment
+- C70: compatibility depends on who uses the library; decision must be vetted by the user. No blanket rule for preserving APIs or making coordinated breaking changes.
+- Updated library source/recipe, confirmations and architecture contract row. Consumer/impact review makes the decision concrete; no approval requirement for every ordinary internal edit inferred.
+- Next: initial authentication recipe scope across passkeys, email codes/links, passwords, Google/Apple sign-in and enterprise SSO. Supported options are distinct from features enabled in a specific app; no selection yet.
+
+## 2026-10-23 — Email-code and passkey login
+- C71: email code is default initial method where sending email is possible; security/accessibility rationale. Code mandatory for cross-machine use; optional link. Apple Mail recognition/autofill required.
+- Passkeys offered from start; smooth passkey-or-email UX. Other login methods remain product choices.
+- Consulted primary Apple/Google/WebKit docs: discoverable passkeys support account selection before email entry; conditional UI fits the requested UX. Apple supports Mail-code autofill; exact email template still requires device verification. No normative email recognition format found; do not substitute SMS domain-bound format as an email guarantee.
+- Saved findings separately from decisions in 97; added login recipe and updated accounts/confirmations. No code or device tests, no auth library or enrollment/recovery policy selected.
+- Next: explain passkeys, then clarify whether email login remains after enrollment, subject to existing company requirements.
+
+## 2026-10-23 — Passkey enrollment after email login
+- C72: ideal signup/login verifies email code then automatically generates a passkey; future login may use passkey or email. Email fallback explicitly retained.
+- Checked current Apple/Google docs: silent conditional creation requires recent saved-password use; email-only login does not meet documented conditions. Normal registration works after email verification with provider UI/confirmation. Do not add passwords to enable silent upgrades.
+- Recorded desired outcome separately from technical constraint. Derived guidance: initiate enrollment in login flow, avoid duplicates, preserve successful email login on cancellation, accommodate required user gesture. No device tests or claim of universal silent support.
+- Updated login source/recipe, account notes and confirmations.
+- Next: primary uploaded-file storage, local vs S3-compatible. No choice proposed as confirmed; backup transport decisions are separate.
+
+## 2026-10-23 — Automatic offer clarified
+- User clarified C72: confirmation prompt is good; automatically offer passkey creation instead of waiting for the user to request it. Silent generation was never required.
+- Updated current source/recipe, account notes and C72 wording. Keep capability research as background, not an unresolved obstacle.
+- Next remains uploaded-file storage. No new authentication question needed.
+
+## 2026-10-23 — Uploaded-file storage and delivery
+- C73: S3-compatible storage authoritative; recommend B2 over Amazon S3. Provider details stay internal; stable file URLs go through the server by default.
+- Separate serving domain may be needed depending on content. Presigned redirects are an option; local disk only caches stored objects and is useful for app-served bytes.
+- Added dedicated source/recipe and updated architecture, operations and confirmations. Access/temporary URL/cache consequences labelled as implementation guidance; no provider pricing/capability comparison or setup claimed.
+- Scope is uploads, not primary DB or backup destinations. No always-on cache or mandatory redirect inferred.
+- Next: incoming upload path, app relay vs authorized direct-to-storage. Not settled by download URL policy.
+
+## 2026-10-23 — Server-mediated uploads and direct-upload exception
+- C74: uploads through app by default; vet raw data before durable storage. Avoid completion/event infrastructure unless frequent large media warrants direct uploads.
+- Direct branch: explicit final server call/equivalent; reconciliation job discovers files actually uploaded despite missing final calls; vet content afterward. Preserve this as reconciliation, not automatic deletion of orphans.
+- User's past SNS completion-event experience was terrible. Prefer explicit completion/reconciliation without turning that into a universal ban on provider events.
+- Updated source/recipe, architecture, operations, values and confirmations. Idempotent finalization and withholding unvetted files recorded as implementation guidance; no exact schedule/checks/cleanup policy selected.
+- Next: production monitoring experience and desired operational baseline. No tool chosen.
+
+## 2026-10-23 — Observability requirements and solution space
+- C75: pervasive metrics; metrics, analytics, spans and good logging from project start. Anomaly monitoring on selected metrics planned. BH remains rudimentary; user requests guidance.
+- Explained complementary signals, correlation, useful monolith tracing, bounded metric labels, sampling/retention and actionable anomaly alerts. Existing analytics journals, audit semantics and manual production recovery preserved.
+- Reviewed primary OpenTelemetry, Prometheus, Grafana and SigNoz docs. Compared backend ownership/maintenance choices; proposed instrumentation and small self-hosted stack evaluation, explicitly unconfirmed. No deployment or benchmark performed.
+- Added source/recipe and updated operations, index and confirmations. Next: strength of infrastructure-ownership preference for monitoring backend; no implementation-detail approval question.
+
+## 2026-10-23 — Grafana Cloud experience and trace storage
+- C76: BH uses Grafana Cloud; high cost and slowness make it a last resort. User wants a lightweight project meeting observability needs. No hosting/replacement/build choice inferred.
+- Explained spans as linked timed records, OTLP Protobuf/JSON interchange versus storage, JSONL feasibility, indexed embedded stores and Tempo Parquet. Checked primary OTLP/schema, Tempo and stable Jaeger/Badger docs.
+- Revised direction away from assuming self-hosted Grafana is the answer. Jaeger/Badger is a trace-only candidate, not a complete evaluated replacement. No installation/benchmark.
+- Updated source, recipe, operations, confirmations and index. Continue the technical discussion; no new interview question pending.
+
+## 2026-10-23 — Reject OTLP and search lightweight Go tools
+- C77: no Protobuf or OTLP; desired integrated inspectability in plain Go on one server with little fuss. Owned lightweight design may be needed, but no implementation/extraction selected.
+- Searched primary project documentation for unified single-binary tools and partial libraries. Recorded Traceway, Waggle, Fanout, archived SigLens, VictoriaTraces, OpenObserve, Gotcha and otelite gaps; owl/gospan/Peek/Outrig are partial references.
+- Found no verified match for all constraints, not proof of nonexistence. No installation, benchmarks or dependency audit. Avoid presenting OTLP/JSON as compliance with the explicit rejection.
+- Updated current source/recipe to supersede earlier OTLP advice; added candidate note and updated operations, confirmations and index. No new interview question pending.
+
+## 2026-10-23 — Dependency-free OTLP output clarified
+- C78 clarifies C77: handwritten encoding of the needed OTLP binary fields may be acceptable without the Protobuf dependency. Not approval of a general runtime, SDK, collector or receiver dependencies.
+- Verified feasibility against official Protobuf wire encoding and OTLP/HTTP specs; standard Go encoding/HTTP mechanisms suffice. No implementation or test performed.
+- Updated current source/recipe and qualified earlier candidate exclusions. Retained historical rejection with explicit supersession; tools speaking OTLP need not be discarded on wire format alone.
+- No new question pending; backend/storage and concrete implementation remain open.
+
+## 2026-10-23 — Inspectability options saved for later trials
+- C79: record all discussed options briefly and try them later; explicitly include Jaeger. Backend selection deferred, no trial or implementation requested now.
+- Added consolidated table to 100, including integrated candidates, Jaeger/Badger, Victoria tools, Grafana components, SigNoz, smaller partial tools, managed comparison and owned fallback. Archived SigLens kept as reference.
+- Updated source, recipe, operations, confirmations and index count. No new interview question pending; continue broader interview when requested without forcing this decision.
+
+## 2026-10-23 — Lightweight anomaly-detection options
+- User asked for analogous lightweight anomaly detection; no preference/algorithm selected, so no new confirmation ID.
+- Added concise try-later research: PromQL rule framework, Anomalyzer/anomalia Go libraries, Netdata, licensed Python vmanomaly, and small owned baselines. Distinguished scoring libraries from complete services.
+- Reviewed primary docs; no deployment, performance or detection-quality testing. Suggested PromQL rules if supported, otherwise small embedded baselines with seasonality/volume handling; unconfirmed guidance.
+- Linked research from candidate list, observability source, recipe and index. Selection stays deferred; no new question pending.
+
+## 2026-10-23 — Direct telemetry files and fast indexes preferred
+- C80: soft avoidance of Prometheus/PromQL as default; BH uses Prometheus. Prefer direct file/journal writes with rotation, possible compression/encryption and indexes for fast retrieval. Expected system is not widely distributed; user asks for critique.
+- Recorded preferred architecture separately from assistant considerations: recovery/replay, aggregate semantics, compression/random access, capacity bounds and independent liveness. Verified local Prometheus storage and logrotate copytruncate limitation from primary docs.
+- Updated current recipe, operations, source/candidate notes, confirmations and index. Earlier PromQL-first advice explicitly superseded as default. Options stay available for later trials.
+- No prototype, benchmark or selected mechanics. No new interview question pending.
+
+## 2026-10-23 — Metrics collection versus file output
+- User follows up: why are metrics collected rather than written like logs; is it a file-format distinction?
+- Explained measurement/snapshot cadence and transport separately from serialization. In-memory counters/histograms can be periodically journaled directly by the app; a scraper is optional. Logs are event records; many metrics are sampled state or aggregates.
+- Added explanation to 102, including resets, gauge sampling and aggregation semantics. No new confirmation ID, selected interval or implementation. C80 remains the current preference.
+
+## 2026-10-23 — Observability tabled pending personal experiments
+- C81: store all options and table the topic; Andrey needs to experiment himself before making detailed recommendations.
+- Marked overview, tool shortlist, anomaly notes and file/index discussion deferred. Updated recipe/operations to prevent untested proposals from becoming defaults.
+- Existing requirements/qualified preferences preserved. No additional research, trials, implementation or sync performed. Continue another interview topic when resumed; no pending question.
+
+## 2026-10-23 — Interview resumed: transactional email
+- User requested continuing the interview. Reviewed state, confirmed decisions and remaining scope; observability remains tabled.
+- Next question asks which production transactional-email delivery setup has earned a default. Login methods and development capture remain settled; no recorded provider choice found.
+- Saved exact pending question; no new confirmed decision.
+
+## 2026-10-23 — Email settled; remaining interview scope summarized
+- C82: Postmark or Mailchimp for transactional email; send through a job. Added source/recipe and linked the settled job architecture without inventing retry guarantees or a provider ranking.
+- User requested an overview before the next question. Added 104 with settled foundations, five candidate remaining cross-cutting topic groups, deferred/separate work and recipe consolidation.
+- Remaining groups are an assistant scope assessment, not newly approved features or a demand to answer every implementation detail. No new question pending; observability stays tabled.
