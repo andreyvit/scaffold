@@ -6,6 +6,14 @@ Started: 2026-10-18 (Maldives). Initial source pass and expanded LifeBase/hiring
 ## Resume here
 Canonical repository: `/Users/andreyvit/Developer/andreyvit/scaffold`. Research moved here from `~/env` on 2026-10-23. Continue in this repo.
 
+Separate skill work, 2026-10-31: created [research-how-to-build-great-apps](../../skills/research-how-to-build-great-apps/SKILL.md). User approved all four proposed additions: failed apps and abandoned users; everyday use under strain; full business economics; prioritized build guidance. These are confirmed skill requirements, not scaffold architecture decisions. No app research started.
+
+User broadened “under strain” to include edge cases and uncommon scenarios an app must handle to be a good platform citizen. Updated skill research scope and report requirements; specific examples are research prompts, not confirmed platform requirements.
+
+User requires pursuing every known research gap until resolved or demonstrably unresolvable. Explain unresolvable limits beside affected claims; no separate unresolved-gaps list. Updated skill continuation, evidence and report rules.
+
+User emphasized preserving the multi-hour/multi-day, goal-driven persistence instruction near verbatim, explicitly covering weak evidence and resumption after rate limits. Added it at the start of the skill's “Scope and duration.”
+
 **Next action: Andrey reviews the consolidated recipes; no interview question pending.** Start with the [review overview](104-interview-overview.md) and [Go/server/web recipe](../../skills/scaffold/references/app-web.md). The [decision map](78-confirmed-decisions.md#current-recipe-map) covers C1–C87 and flags supersessions. Consolidation added no user decisions and did not implement an app.
 
 The [overview](104-interview-overview.md) separates review points, product/implementation decisions and deferred research. The useful general-default interview is consolidated; this is a scope judgment, not confirmation that every architecture detail is settled. Reopen a question only for a concrete unresolved tradeoff.
