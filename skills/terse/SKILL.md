@@ -12,6 +12,7 @@ Overrides:
 - Cut harder than STE. Do not keep words just to satisfy STE.
 - Name who or what acts. Functions and systems can be subjects. Don't let abstractions act ("the complaint becomes a fix").
 - Name the file, command, field, button, number. Keep those real names. Don't replace English with jargon.
+- Verbs signal actual sentiment and purpose: “Users praise…” / “Users complain…”. Preserve mixed evidence.
 
 Remove:
 - fluff, hedging, repetition
@@ -33,7 +34,10 @@ Keep:
 - when/when-not boundaries
 - examples that teach a distinction
 
-Recheck: the start of a sentence must intuitively lead to its end. Garden-path (grammatical, first parse is wrong) → rewrite the structure.
+Match how human readers parse sentences:
+- Readers expect subject → verb → object: first noun acts, next noun receives action. Write in that order.
+- Shared subject across items → omit it; start with verb. Tense matches status: completed, ongoing, planned.
+- Opening must lead naturally to ending. Garden-path (grammatical, first parse is wrong) → rewrite structure.
 
 Verbatim: tech terms, code, API names, CLI, keywords (feat/fix/...), exact messages/errors/strings.
 
@@ -56,6 +60,12 @@ Don't invent details. Don't omit details.
 | Happy to help you with that. The issue you're experiencing is likely caused by incorrect comparison behavior happening during authentication where middleware function uses strict comparison (`<`) where non-strict comparison (`<=`) should have been used. | Likely bug in auth middleware. Token expiry check uses `<` not `<=`. |
 | It is important to understand that when you are working with code review processes, you need to make sure that you're conducting a thorough and systematic analysis of the codebase. | Review the diff in order. Look for bugs, missing tests, and breakage. |
 | You should definitely make sure to validate all user input in order to prevent security vulnerabilities due to the fact that malicious users might try to inject harmful code. | Validate user input to stop injection. |
+| Login bug fixed by the agent. | The agent fixed the login bug. |
+| Active session titles: “KV persistence”; “Switching to main”; “Fine-tune model”. | “Adding KV persistence”; “Switching to main”; “Fine-tuning model”. |
+| Your order #1001 has shipped. Your order #1002 was cancelled. | Shipped: order #1001. Cancelled: order #1002. |
+| Feedback-summary sentences: “The review reports a crash”; “The feedback mentions lost progress”. | “Users report a crash”; “Users report lost progress”. |
+| Feedback cards, both based on 10 reviews: “Crashes: 10 reviews”; “Slow startup: users complain”. | “Crashes: 10 reviews”; “Slow startup: 10 reviews”. Show the same facts for each card; omitted counts can imply fewer complaints. |
+| Chess is a popular new draw. Users report wrong rules and excessive clicks. | Users enjoy chess but complain about wrong rules and excessive clicks. |
 
 Verbose skill text:
 
@@ -70,6 +80,11 @@ Max-terse skill text:
     - new features
     - bug fixes
     - refactoring
+
+UI labels, lists, feeds, titles, dashboard text:
+- Front-load distinguishing words; avoid repeated generic openers.
+- Same structure, same fields; one term per concept.
+- Vary length, structure, or detail only for meaningful differences. Keep necessary exceptions.
 
 Use for:
 
