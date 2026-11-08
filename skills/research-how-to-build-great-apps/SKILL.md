@@ -1,20 +1,20 @@
 ---
 name: research-how-to-build-great-apps
-description: Research what makes great, successful indie apps for a user-specified platform and app category. Use for exhaustive research on app quality, UX, business and technology choices.
+description: Research what makes great, successful indie apps for a user-specified platform and app category. Use for exhaustive research on app quality, UX, business and technology choices; deliver a practical scaffold playbook.
 ---
 
-Research what constitutes a great app within the user's scope. Write max-terse, plain English; preserve detail.
+Research what constitutes a great app within the user's scope and turn the findings into a practical playbook for planning, building and reviewing that kind of product. Write max-terse, plain English; preserve detail.
 
 ## Scope and duration
 
 This is exhaustive, multi-hour or even multi-day research. Set up a goal. Run as long as you need to cover everything. Do not stop until every gap and weak evidence is either filled conclusively, or you can explain why it is unsolvable. OK to run out of rate limits; user will resume after limits reset.
 
 - Establish platform, app category and any specified niches, locales, audiences or constraints. Ask only for missing scope; one question at a time.
-- For an app part, feature or component, apply all sections below only where relevant. Cover the requested scope thoroughly; omit unrelated areas such as full business economics when they do not apply. Briefly explain exclusions in the report's scope.
-- Inspect related existing recipes before research. For a subset of a recipe or a component shared by several recipes, focus on what is unique to the request. Cross-link shared guidance in those recipes and highlight differences in requirements, behavior and tradeoffs; avoid repeating their full coverage.
-- Goal: cover all relevant research areas below and deliver one finished report.
+- For an app part, feature or component, apply all sections below only where relevant. Cover the requested scope thoroughly; omit unrelated areas such as full business economics when they do not apply. Briefly explain exclusions in the playbook's scope.
+- Inspect related existing playbooks and recipes before research. Expand a matching playbook instead of creating a duplicate. For a subset of a recipe or a component shared by several recipes, focus on what is unique to the request. Cross-link shared guidance in those recipes and highlight differences in requirements, behavior and tradeoffs; avoid repeating their full coverage.
+- Goal: cover all relevant research areas below and deliver one finished playbook.
 - Save findings and exact next steps often. Resume saved work; do not restart the survey.
-- Track coverage, sources read, open questions and next steps in a working section of the report. Update report as you go. Treat each known gap as further work. Continue until every question is resolved or you can explain why it cannot be resolved. Before delivery, remove working notes; explain unobtainable knowledge beside affected claims. Mark goal complete only after this check, coverage and report review.
+- Track coverage, sources read, open questions and next steps in a working section of the playbook. Update the playbook as you go. Treat each known gap as further work. Continue until every question is resolved or you can explain why it cannot be resolved. Before delivery, remove working notes; explain unobtainable knowledge beside affected claims. Mark goal complete only after this check, coverage and playbook review.
 - Use short-lived data gathering subagents to save context and speed up research.
 
 ## Meanings of great
@@ -95,9 +95,13 @@ For each, preserve differences by niche, locale, category and audience. Do not g
 - Cover every requested area. Pursue missing evidence and contradictions through targeted searches, alternative sources and methods. Failed searches alone do not prove a question unresolvable; neither do time spent or rate limits.
 - For each unresolvable question, explain beside the affected claim what you tried, what prevents resolution and how that limits the conclusion. Never invent certainty or deliver a separate unresolved-gaps list.
 
-## Deliver one report file
+## Deliver one playbook
 
-Use a Markdown file in the agreed location, or a clearly named file in the current workspace. Title: researched platform, category and other user criteria.
+Default destination: `skills/scaffold/references/playbook-<topic>.md` in the scaffold repository, resolved as `../scaffold/references/` from this skill's directory. Honor an explicit user destination. Use a short, lowercase, hyphenated topic matching existing names, such as `playbook-macos-apps.md` or `playbook-mobile-api-sdks.md`. Keep dates in the content, not filenames. Title the playbook for its platform, category and other user criteria.
+
+Write a practical guide, not a research diary: explain what to build, how it should behave, which choices fit, what to avoid and why. Preserve the full depth and evidence required below. Playbooks guide product quality; recipes specify confirmed implementation defaults. Recommendations do not override project decisions or promote themselves into recipe requirements.
+
+For scaffold playbooks, add or update the link in the [scaffold skill's playbook index](../scaffold/SKILL.md#playbooks). Cross-link related playbooks and recipes with relative links; verify links after writing or moving files. Keep interview history and working state in their existing locations. Creating or updating a playbook does not authorize committing or pushing.
 
 Cover the relevant sections below, applying the scope rules above:
 
@@ -117,7 +121,7 @@ Cover the relevant sections below, applying the scope rules above:
 14. Named technologies/libraries to avoid: verified status, failure modes, replacements and exceptions.
 15. Sources.
 
-Keep the report readable: order these sections to suit the material, cross-link overlapping findings and preserve existing valid research when expanding a report.
+Keep the playbook readable: order these sections to suit the material, cross-link overlapping findings and preserve existing valid research when expanding a playbook.
 
 Include lessons from failures, edge cases, uncommon scenarios, platform citizenship, use under strain and full business economics in relevant sections. For each relevant scenario, state expected behavior and consequences of mishandling it. Keep findings specific to researched scope.
 

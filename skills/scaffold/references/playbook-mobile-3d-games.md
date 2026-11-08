@@ -8,7 +8,7 @@ Indie and small-team games shipping on both iOS and Android: spatial puzzles, ta
 
 No genre, audience, region or monetization model was specified. Compare those branches instead of selecting one for every game.
 
-Related guidance: [iOS app research](ios-apps.md), [Android app research](android-apps.md), [engineering values](../skills/scaffold/references/values.md), [iOS layering](../skills/scaffold/references/ios-layering.md), [testing](../skills/scaffold/references/testing.md), [analytics](../skills/scaffold/references/analytics.md), [optional offline sync](../skills/scaffold/references/offline-sync.md). Existing native app preferences do not answer which shared game engine to use. Web Stripe defaults do not decide mobile billing. Game progress, purchases and multiplayer state need their own conflict semantics; do not copy document timestamp merging into currency balances.
+Related guidance: [iOS app research](playbook-ios-apps.md), [Android app research](playbook-android-apps.md), [engineering values](values.md), [iOS layering](ios-layering.md), [testing](testing.md), [analytics](analytics.md), [optional offline sync](offline-sync.md). Existing native app preferences do not answer which shared game engine to use. Web Stripe defaults do not decide mobile billing. Game progress, purchases and multiplayer state need their own conflict semantics; do not copy document timestamp merging into currency balances.
 
 ## How to use this report
 

@@ -2,7 +2,7 @@
 
 Research completed 8 November 2026. Scope: Windows desktop apps for individual professionals and small teams, including business workflows, document/data tools, notes/tasks, launchers and system utilities. Enterprise deployment matters where customers require it. Games, server software and specialist creative suites are outside the main scope; relevant lessons are labelled comparisons.
 
-Research recommendations do not change confirmed scaffold choices. Existing [values](../skills/scaffold/references/values.md), [changes and undo](../skills/scaffold/references/changes.md), [optional offline sync](../skills/scaffold/references/offline-sync.md) and [configuration](../skills/scaffold/references/app-config.md) provide shared reasoning, not a Windows framework mandate. Compare [macOS](macos-apps.md), [B2B web](b2b-saas-web-apps.md) and [tiny cross-platform utilities](tiny-cross-platform-utilities.md); this report owns Windows conventions and deployment tradeoffs.
+Research recommendations do not change confirmed scaffold choices. Existing [values](values.md), [changes and undo](changes.md), [optional offline sync](offline-sync.md) and [configuration](app-config.md) provide shared reasoning, not a Windows framework mandate. Compare [macOS](playbook-macos-apps.md), [B2B web](playbook-b2b-saas-web-apps.md) and [tiny cross-platform utilities](playbook-tiny-cross-platform-utilities.md); this report owns Windows conventions and deployment tradeoffs.
 
 
 ## Read by decision

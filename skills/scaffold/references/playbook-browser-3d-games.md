@@ -8,7 +8,7 @@ Evidence separates platform requirements, developer disclosures, independent rev
 
 Read [build priorities](#prioritized-build-guidance), then compare [examples](#exemplary-games-and-limits), [visual directions](#visual-directions-evidence-backed-design-hypotheses), [commercial models](#distribution-contracts-and-economics) and [compatibility](#compatibility-four-separate-promises). The practical references contain 93 details; the ecosystem catalog contains 70 named choices plus design resources.
 
-Research checked 2026-11-08. Indie/small-team browser games: desktop and mobile; single-player and multiplayer; own-site and portal distribution. No genre, locale, engine or business model selected. Native mobile implementation is covered in [mobile 3D research](mobile-3d-games.md); web account/server foundations in the [web recipe](../skills/scaffold/references/app-web.md). Browser game rendering needs its own simulation/input loop; generic server-rendered app guidance does not prescribe the game runtime. Recommendations here are research, not confirmed scaffold choices.
+Research checked 2026-11-08. Indie/small-team browser games: desktop and mobile; single-player and multiplayer; own-site and portal distribution. No genre, locale, engine or business model selected. Native mobile implementation is covered in [mobile 3D research](playbook-mobile-3d-games.md); web account/server foundations in the [web recipe](app-web.md). Browser game rendering needs its own simulation/input loop; generic server-rendered app guidance does not prescribe the game runtime. Recommendations here are research, not confirmed scaffold choices.
 
 ## What makes a browser 3D game great
 

@@ -6,9 +6,9 @@ Read by task: [build priorities](#prioritized-build-guidance) · [game examples]
 
 ## Scope
 
-Indie and small-team games with 2D gameplay and primarily 2D presentation, shipping on iOS and Android. Puzzles, cards, tactics, platformers, arcade/action, simulation and narrative games; premium, free-to-start, ad-supported and subscription distribution. Include larger games only for bounded lessons. Compare genre, audience and region branches; none was selected by the user. Spatial 3D/2.5D production is covered in [3D mobile games](mobile-3d-games.md); this report emphasizes 2D controls, composition, animation, content and engineering. Real-money gambling, full MMO operations and console-only production are outside the core scope.
+Indie and small-team games with 2D gameplay and primarily 2D presentation, shipping on iOS and Android. Puzzles, cards, tactics, platformers, arcade/action, simulation and narrative games; premium, free-to-start, ad-supported and subscription distribution. Include larger games only for bounded lessons. Compare genre, audience and region branches; none was selected by the user. Spatial 3D/2.5D production is covered in [3D mobile games](playbook-mobile-3d-games.md); this report emphasizes 2D controls, composition, animation, content and engineering. Real-money gambling, full MMO operations and console-only production are outside the core scope.
 
-Related research: [iOS](ios-apps.md), [Android](android-apps.md). Related confirmed recipes: [values](../skills/scaffold/references/values.md), [iOS layering](../skills/scaffold/references/ios-layering.md), [testing](../skills/scaffold/references/testing.md), [offline sync](../skills/scaffold/references/offline-sync.md). Native non-game app defaults do not select a game engine; document conflict rules do not define currency/save reconciliation.
+Related research: [iOS](playbook-ios-apps.md), [Android](playbook-android-apps.md). Related confirmed recipes: [values](values.md), [iOS layering](ios-layering.md), [testing](testing.md), [offline sync](offline-sync.md). Native non-game app defaults do not select a game engine; document conflict rules do not define currency/save reconciliation.
 
 
 ## What makes a 2D mobile game great
@@ -136,7 +136,7 @@ These are durable design families inferred from shipped examples and criticism, 
 
 ### Design resources worth using
 
-Use **Game UI Database** to compare shipped menus/HUDs by task, not to copy a random attractive screenshot. The site was access-restricted in this pass; the related 3D research documents its mobile filter and independent coverage. Do not claim direct browsing of its catalog here. Screen references are not production asset licenses. [Game UI Database](https://www.gameuidatabase.com/), [existing resource assessment](mobile-3d-games.md#design-reference-sources).
+Use **Game UI Database** to compare shipped menus/HUDs by task, not to copy a random attractive screenshot. The site was access-restricted in this pass; the related 3D research documents its mobile filter and independent coverage. Do not claim direct browsing of its catalog here. Screen references are not production asset licenses. [Game UI Database](https://www.gameuidatabase.com/), [existing resource assessment](playbook-mobile-3d-games.md#design-reference-sources).
 
 Use **Apple HIG and WWDC24/26 transcripts** for device behavior, safe areas, touch feedback and physical control mapping. They are vendor recommendations with concrete implementations; they do not measure delight or prove a genre’s economics. WWDC26 demonstrates combining hold/drag/release into one action rather than requiring a third finger. The rendering/API examples are Apple-specific. [WWDC24](https://developer.apple.com/videos/play/wwdc2024/10085/), [WWDC26](https://developer.apple.com/videos/play/wwdc2026/358/).
 

@@ -10,7 +10,7 @@ This report covers the README displayed on a GitHub library repository: prose, e
 
 Excluded: whole-library architecture, documentation-site design, community governance, app stores, pricing models, sales funnels, broad language ecosystems and a hundred-component catalog. A README has no independent runtime, purchase flow or device-support policy. Their relevant equivalents are reader compatibility, dependency-fit disclosures, successful first use and maintenance cost.
 
-Recommendations are research judgments, not new scaffold decisions. Existing [library boundaries](../skills/scaffold/references/library-boundaries.md) govern extraction and API compatibility; [engineering values](../skills/scaffold/references/values.md) govern clarity and upkeep. This research neither extracts a library nor chooses its compatibility policy.
+Recommendations are research judgments, not new scaffold decisions. Existing [library boundaries](library-boundaries.md) govern extraction and API compatibility; [engineering values](values.md) govern clarity and upkeep. This research neither extracts a library nor chooses its compatibility policy.
 
 Evidence combines primary platform documentation, published research, author guidance, maintainer discussions and direct README inspection. Nine library examples span JavaScript, TypeScript, Go, Rust and Python. Three live GitHub desktop views were visually inspected in dark mode: Mitt, Zod and p-limit. This is a documentation review, not a library benchmark, install test or accessibility certification. Default-branch content can change; examples describe the inspected state, not every published release.
 

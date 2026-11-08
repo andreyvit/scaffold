@@ -8,7 +8,7 @@ Read by task: [examples and critique](#strong-findings-and-disagreements) · [vi
 
 Indie and small-team 2D browser games: puzzles, platformers, action, idle/incremental, narrative, strategy and social/multiplayer. Desktop and mobile browsers; own-site, embedded portals and itch.io. Compare premium, ads, donations and purchases by fit. Native wrappers and 3D supply bounded comparisons only. No genre, locale, audience or engine was specified.
 
-Related recipes: [web app](../skills/scaffold/references/app-web.md), [values](../skills/scaffold/references/values.md), [testing](../skills/scaffold/references/testing.md). Server-rendered account/store pages and real-time client simulation have different requirements. This research does not replace confirmed app defaults.
+Related recipes: [web app](app-web.md), [values](values.md), [testing](testing.md). Server-rendered account/store pages and real-time client simulation have different requirements. This research does not replace confirmed app defaults.
 
 ## What makes browser games different
 

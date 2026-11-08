@@ -10,7 +10,7 @@ Read by task: [app examples](#app-examples-dimensions-of-great-and-limitations),
 
 Business includes document, finance and team-work clients; productivity includes notes, tasks, calendars, email and knowledge tools; utilities include file, backup, credential, capture and system tools. Games, server administration and specialist creative production are outside scope except useful comparisons. Linux does not have one desktop interaction contract. Distinguish GNOME recommendations, KDE recommendations, cross-desktop conventions and product exceptions.
 
-Shared principles: [values](../skills/scaffold/references/values.md), [offline sync](../skills/scaffold/references/offline-sync.md), [data rights](../skills/scaffold/references/data-rights.md). Server defaults in the [web recipe](../skills/scaffold/references/app-web.md) do not select a Linux UI stack. Compare [Mac craft](macos-apps.md), [B2B workflows](b2b-saas-web-apps.md) and [tiny cross-platform tools](tiny-cross-platform-utilities.md); this report owns Linux desktop differences and broader work apps.
+Shared principles: [values](values.md), [offline sync](offline-sync.md), [data rights](data-rights.md). Server defaults in the [web recipe](app-web.md) do not select a Linux UI stack. Compare [Mac craft](playbook-macos-apps.md), [B2B workflows](playbook-b2b-saas-web-apps.md) and [tiny cross-platform tools](playbook-tiny-cross-platform-utilities.md); this report owns Linux desktop differences and broader work apps.
 
 ## How to judge greatness
 

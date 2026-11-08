@@ -18,7 +18,7 @@ Tiny describes a narrow job and modest interaction cost, not necessarily a tiny 
 
 Talking Duck currently documents a Mac-centered work/agent monitor, shared Go collector, CLI/TUI and Wails desktop shell. This is an example of the problem class, not evidence of tested Windows/Linux support. Product docs leave parts of future product shape open; current dependencies do not establish a permanent framework preference.
 
-Shared references: [Mac craft](macos-apps.md), [iOS companions](ios-apps.md), [Android companions](android-apps.md). This report concentrates on cross-platform integration and the unusually high trust/maintenance burden of a small always-available tool.
+Shared references: [Mac craft](playbook-macos-apps.md), [iOS companions](playbook-ios-apps.md), [Android companions](playbook-android-apps.md). This report concentrates on cross-platform integration and the unusually high trust/maintenance burden of a small always-available tool.
 
 ## What “great” means for a tiny tool
 
